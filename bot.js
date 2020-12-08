@@ -140,7 +140,7 @@ client.on("guildMemberAdd", member => {
   const strigalog = new Discord.MessageEmbed()
     .setAuthor(member.guild.name)
     .setDescription(
-      "**<a:Light_kelebek:782571644325593089> Hoşgeldin! <@" +
+      "** Hoşgeldin! <@" +
         member +
         "> Seninle `" +
         member.guild.memberCount +

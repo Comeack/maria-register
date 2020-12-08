@@ -39,7 +39,7 @@ const embed = new Discord.MessageEmbed()
     .addField(`Yetkili Toplam:`, `\`${kayıtlar}\` Kayıtlara Sahip.`)
 .setFooter(`Blue Light`)
 .setColor('BLACK')
-client.channels.cache.get('782501827345645578').send(embed)
+client.channels.cache.get('785774435406839838').send(embed)
   
 }
 

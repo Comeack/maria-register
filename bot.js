@@ -126,7 +126,7 @@ client.on("guildMemberAdd", member => {
 
 client.on("guildMemberAdd", member => {
   const kanal = member.guild.channels.cache.find(
-    r => r.id === "782501827345645578"
+    r => r.id === "7825018273456455788"
   );
   const register = "<@&782501088402079747>";
   let user = client.users.cache.get(member.id);
@@ -140,7 +140,7 @@ client.on("guildMemberAdd", member => {
   const strigalog = new Discord.MessageEmbed()
     .setAuthor(member.guild.name)
     .setDescription(
-      "**Hoşgeldin! <@" +
+      "**<a:Light_kelebek:782571644325593089> Hoşgeldin! <@" +
         member +
         "> Seninle `" +
         member.guild.memberCount +

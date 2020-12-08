@@ -3,11 +3,11 @@ const db = require('quick.db')
 
 exports.run = async (client, message, args) => {
 
- if(!['KAYITÇI ROL İD', 'EXTRA ROL KOYABİLİRSİN', 'EĞER KOYMAK İSTEMİYORSAN TIRNAKLARI SİL'].some(role => message.member.roles.cache.get(role)) && !message.member.hasPermission('ADMINISTRATOR')) return message.reply(`Bu Komut İçin Yetkiniz Bulunmamaktadır.`) 
+ if(!['782501088402079747'].some(role => message.member.roles.cache.get(role)) && !message.member.hasPermission('ADMINISTRATOR')) return message.reply(`Bu Komut İçin Yetkiniz Bulunmamaktadır.`) 
   
-let tag = "STG"
-const kayıtlı = message.guild.roles.cache.find(r => r.id === 'ROL ID')
-const kayıtsız = message.guild.roles.cache.find(r => r.id === 'ROL ID')
+let tag = " さ"
+const kayıtlı = message.guild.roles.cache.find(r => r.id === '782331242157965312')
+const kayıtsız = message.guild.roles.cache.find(r => r.id === '782278694025953331')
 
 if(!kayıtlı) return message.reply('Kayıtlı Rolü Ayarlanmamış.') 
 if(!kayıtsız) return message.reply('Kayıtsız Rolü Ayarlanmamış.') 
@@ -37,9 +37,9 @@ const embed = new Discord.MessageEmbed()
     .addField(`Alınan Rol:`, `<@&${kayıtsız.id}> Rolleri Alındı`)
     .addField(`Yeni İsmin:`, `\`${tag} ${isim} | ${yas}\` Olarak Güncellendi`) 
     .addField(`Yetkili Toplam:`, `\`${kayıtlar}\` Kayıtlara Sahip.`)
-.setFooter(`Striga #Code`)
-.setColor('GREEN')
-client.channels.cache.get('KANAL ID').send(embed)
+.setFooter(`Blue Light`)
+.setColor('BLACK')
+client.channels.cache.get('782501827345645578').send(embed)
   
 }
 

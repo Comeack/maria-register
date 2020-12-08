@@ -24,6 +24,7 @@ exports.run = async (client, message, args) => {
     if (kayıtlar === undefined) kayıtlar = "0";
 
     const sorgu1 = new Discord.MessageEmbed()
+      .setColor("BLACK")
       .setThumbnail(message.author.avatarURL({ dynamic: true }))
       .setAuthor(message.author.username, message.author.avatarURL)
       .setDescription(
@@ -54,7 +55,7 @@ exports.run = async (client, message, args) => {
 ✾ Toplam Erkek Kayıtların: \`${erkek1}\`
 ❀ Toplam Kadın Kayıtların: \`${kadın1}\``
       )
-      .setFooter(`Sadxmamy ❤️ Striga`); // evet bilerek kaldırmadım ayriyetten sıfırdan yazdım :)
+      .setFooter(`Blue Light`); // evet bilerek kaldırmadım ayriyetten sıfırdan yazdım :)
     return message.channel.send(sorgu2);
   }
 };
@@ -62,7 +63,7 @@ exports.run = async (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["stat", "kayıtlar", "kayıt-kontrol"],
+  aliases: ["stat", "kayıtlar", "kayıt-kontrol","ks"],
   permLvl: 0
 };
 

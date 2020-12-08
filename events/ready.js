@@ -1,4 +1,3 @@
-
 const chalk = require("chalk");
 const moment = require("moment");
 const Discord = require("discord.js");
@@ -15,11 +14,8 @@ module.exports = client => {
       client.user.username
     } ismi ile giriş yapıldı!`
   );
-  client.user.setStatus("invisible");
-  var oyun = [
-    "STG V12 REG",
-
-  ];
+  client.user.setStatus("dnd");
+  var oyun = ["Comeback ❤️"];
 
   setInterval(function() {
     var random = Math.floor(Math.random() * (oyun.length - 0 + 1) + 0);
@@ -27,4 +23,3 @@ module.exports = client => {
     client.user.setActivity(oyun[random], "");
   }, 2 * 2500);
 };
-

@@ -118,7 +118,7 @@ client.login(ayarlar.token);
 //-----------------------GİRENE-ROL-VERME----------------------\\     STG
 
 client.on("guildMemberAdd", member => {
-  member.roles.add('UNREGISTER ID'); // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
+  member.roles.add('782278694025953331'); // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
 });
 
 //-----------------------GİRENE-ROL-VERME----------------------\\     STG
@@ -128,7 +128,7 @@ client.on("guildMemberAdd", member => {
 
 client.on("guildMemberAdd", member => {  
     const kanal = member.guild.channels.cache.find(r => r.id === "KANAL ID");
-    const register = "<@&REGISTER YAPAN ROL ID>"
+    const register = "<@&782501088402079747>"
     let user = client.users.cache.get(member.id);
     require("moment-duration-format");
       const kurulus = new Date().getTime() - user.createdAt.getTime();  
@@ -139,7 +139,7 @@ client.on("guildMemberAdd", member => {
     moment.locale("tr");
       const strigalog = new Discord.MessageEmbed()
       .setAuthor(member.guild.name)
-  .setDescription("**Hoşgeldin! <@" + member + "> Seninle \`" + member.guild.memberCount + "\` Kişiyiz.\n\nMüsait olduğunda Confirmed Odalarından Birine Geçip Kaydını Yaptırabilirsin. \n\n<@&771695296291668000> seninle ilgilenicektir. \n\nHesabın Oluşturulma Tarihi: " + moment(member.user.createdAt).format("`YYYY DD MMMM dddd`") +  "\n\n"  + kontrol + "\n\nTagımızı alarak ` STG ` bize destek olabilirsin.**\n")
+  .setDescription("**Hoşgeldin! <@" + member + "> Seninle \`" + member.guild.memberCount + "\` Kişiyiz.\n\nMüsait olduğunda Confirmed Odalarından Birine Geçip Kaydını Yaptırabilirsin. \n\n<@&782501088402079747> seninle ilgilenicektir. \n\nHesabın Oluşturulma Tarihi: " + moment(member.user.createdAt).format("`YYYY DD MMMM dddd`") +  "\n\n"  + kontrol + "\n\nTagımızı alarak ` さ ` bize destek olabilirsin.**\n")
    .setImage("https://i.pinimg.com/originals/2c/43/ac/2c43acd8c41ee853cf9fbb04960e4fa6.gif")
    kanal.send(strigalog)   
      kanal.send(register) 
@@ -152,10 +152,10 @@ client.on("guildMemberAdd", member => {
 
 client.on("userUpdate", async (oldUser, newUser) => {
   if (oldUser.username !== newUser.username) {
-  const tag = 'TAGINIZ'
-  const sunucu = 'SUNUCU ID'
-  const kanal = 'KANAL ID'
-  const rol = 'ROL ID'
+  const tag = 'さ'
+  const sunucu = '771452690784976916'
+  const kanal = '782554112734658570'
+  const rol = '782539554120400907'
 
   try {
 
@@ -183,11 +183,11 @@ console.log(`Bir hata oluştu! ${e}`)
 //-----------------------OTO-TAG-----------------------\\     STG
 
 client.on("userUpdate", async (stg, yeni) => {
-  var sunucu = client.guilds.cache.get('SUNUCU ID'); // Buraya Sunucu ID
+  var sunucu = client.guilds.cache.get('771452690784976916'); // Buraya Sunucu ID
   var uye = sunucu.members.cache.get(yeni.id);
-  var tag = ""; // Buraya Ekip Tag
-  var tagrol = ""; // Buraya Ekip Rolünün ID
-  var kanal = ""; // Loglanacağı Kanalın ID
+  var tag = "さ"; // Buraya Ekip Tag
+  var tagrol = "782539554120400907"; // Buraya Ekip Rolünün ID
+  var kanal = "782554112734658570"; // Loglanacağı Kanalın ID
 
   if (!sunucu.members.has(yeni.id) || yeni.bot || stg.username === yeni.username) return;
   

@@ -1,39 +1,44 @@
-const Discord = require("discord.js"); //
-const client = new Discord.Client(); //
-const ayarlar = require("./ayarlar.json"); //
-const chalk = require("chalk"); //
-const moment = require("moment"); //
-var Jimp = require("jimp"); //
-const { Client, Util } = require("discord.js"); //
-const fs = require("fs"); //
-const db = require("quick.db"); //
-const express = require("express"); //
-require("./util/eventLoader.js")(client); //
-const path = require("path"); //
-const snekfetch = require("snekfetch"); //
-//
+const Discord = require("discord.js");
+const client = new Discord.Client();
+const ayarlar = require("./ayarlar.json");
+const chalk = require("chalk");
+const moment = require("moment");
+const { Client, Util } = require("discord.js");
+const fs = require("fs");
+const http = require("http");
+const express = require("express");
+require("./util/eventLoader.js")(client);
+const path = require("path");
+const request = require("request");
+const queue = new Map();
 
-var prefix = ayarlar.prefix; //
-//
+const app = express();
+app.get("/", (request, response) => {
+  console.log(Date.now() + "Bot Hostlandı!");
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
+
+var prefix = ayarlar.prefix;
+
 const log = message => {
-  //
-  console.log(`${message}`); //
+  console.log(`${message}`);
 };
 
-client.commands = new Discord.Collection(); //
-client.aliases = new Discord.Collection(); //
+client.commands = new Discord.Collection();
+client.aliases = new Discord.Collection();
 fs.readdir("./komutlar/", (err, files) => {
-  //
-  if (err) console.error(err); //
-  log(`${files.length} komut yüklenecek.`); //
+  if (err) console.error(err);
+  log(`${files.length} komut yüklenecek.`);
   files.forEach(f => {
-    //
-    let props = require(`./komutlar/${f}`); //
-    log(`Yüklenen komut: ${props.help.name}.`); //
-    client.commands.set(props.help.name, props); //
+    let props = require(`./komutlar/${f}`);
+    log(`Yüklenen komut: ${props.help.name}.`);
+    client.commands.set(props.help.name, props);
     props.conf.aliases.forEach(alias => {
-      //
-      client.aliases.set(alias, props.help.name); //
+      client.aliases.set(alias, props.help.name);
     });
   });
 });
@@ -93,7 +98,6 @@ client.elevation = message => {
   if (!message.guild) {
     return;
   }
-
   let permlvl = 0;
   if (message.member.hasPermission("BAN_MEMBERS")) permlvl = 2;
   if (message.member.hasPermission("ADMINISTRATOR")) permlvl = 3;
@@ -101,187 +105,97 @@ client.elevation = message => {
   return permlvl;
 };
 
+//KAYIT MESAJ
+//NOT Kendi isteğinize göre burada ki yazıları değiştirin!
+client.on("guildMemberAdd", (member, message) => {
+  const sunucuid = "771452690784976916"; //Sunucu id
+  const id = "782501827345645578"; //Kanal id
+  const jail = "782330921713532929"; //jail rol id
+  const kayıtsız = "782278694025953331"; //Kayıtsız rol id
+  let resim = "";
+  if (member.guild.id !== sunucuid) return;
+  let aylartoplam = {
+    "01": "Ocak",
+    "02": "Şubat",
+    "03": "Mart",
+    "04": "Nisan",
+    "05": "Mayıs",
+    "06": "Haziran",
+    "07": "Temmuz",
+    "08": "Ağustos",
+    "09": "Eylül",
+    "10": "Ekim",
+    "11": "Kasım",
+    "12": "Aralık"
+  };
+  let aylar = aylartoplam;
+  let user = client.users.cache.get(member.id);
+  require("moment-duration-format");
+  let eskiNick = member.user.username;
+  const channel = member.guild.channels.cache.get(id);
+  const kurulus = new Date().getTime() - user.createdAt.getTime();
+  const gün = moment.duration(kurulus).format("D");
+  var kontrol;
+  if (gün < 14) {
+    kontrol = "Güvenilmeyen Kullanıcı ";
+    member.roles.add(jail);
+  }
+  if (gün > 14) {
+    kontrol = "Güvenilir Kullanıcı ✔️";
+    member.roles.add(kayıtsız);
+  }
+
+  let codearius = new Discord.MessageEmbed()
+    .setAuthor(`Blue Light`)
+    .setImage(
+      "https://cdn.discordapp.com/attachments/782501827345645578/785885757909762068/giphy_1.gif"
+    )
+    .setDescription(
+      `<a:Light_selam:785877172606468127> **Sunucumuza hoşgeldin** ${member}
+
+<a:Light_kelebek:782571644325593089> **Seninle beraber** ${member.guild.members.cache.size} **kişiyiz** <a:Light_kalp_2:776549323101569065>
+
+<a:Light_uzay:784807859736412160> Kayıt olmak için <@&782501088402079747> rolündeki yetkilileri etiketlemeyi unutma.`
+    )
+    .addField(
+      "<a:Light_raptiye_2:784807925277392906> Hesap Oluşturma Tarihi",
+      `\`${moment(user.createdAt).format("DD")} ${
+        aylar[moment(user.createdAt).format("MM")]
+      } ${moment(user.createdAt).format("YYYY")}\``,
+      true
+    )
+    .addField(
+      "<a:Light_raptiye_2:784807925277392906> Bu Hesap",
+      `\`${kontrol}\``,
+      true
+    )
+    .setThumbnail(resim)
+    .setColor("BLACK");
+  channel.send(codearius);
+  channel.send(`<@&782501088402079747>`);
+});
+//
+
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
-// client.on('debug', e => {
-//   console.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
-// });
 client.on("warn", e => {
   console.log(chalk.bgYellow(e.replace(regToken, "that was redacted")));
 });
+
 client.on("error", e => {
   console.log(chalk.bgRed(e.replace(regToken, "that was redacted")));
 });
-
 client.login(ayarlar.token);
 
-//-----------------------GİRENE-ROL-VERME----------------------\\     STG
+///
 
-client.on("guildMemberAdd", member => {
-  member.roles.add("782278694025953331"); // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
+client.on("ready", async function() {
+  const voiceChannel = "784107337962094652";
+  client.channels.cache
+    .get(voiceChannel)
+    .join()
+    .catch(err => {
+      throw err;
+    });
 });
+//////
 
-//-----------------------GİRENE-ROL-VERME----------------------\\     STG
-
-//-----------------------HOŞ-GELDİN-MESAJI----------------------\\     STG
-
-client.on("guildMemberAdd", member => {
-  const kanal = member.guild.channels.cache.find(
-    r => r.id === "7825018273456455788"
-  );
-  const register = "<@&782501088402079747>";
-  let user = client.users.cache.get(member.id);
-  require("moment-duration-format");
-  const kurulus = new Date().getTime() - user.createdAt.getTime();
-
-  var kontrol;
-  if (kurulus < 1296000000) kontrol = "Hesap Durumu: Güvenilir Değil";
-  if (kurulus > 1296000000) kontrol = "Hesap Durumu: Güvenilir Gözüküyor";
-  moment.locale("tr");
-  const strigalog = new Discord.MessageEmbed()
-    .setAuthor(member.guild.name)
-    .setDescription(
-      "** Hoşgeldin! <@" +
-        member +
-        "> Seninle `" +
-        member.guild.memberCount +
-        "` Kişiyiz.\n\nMüsait olduğunda Confirmed Odalarından Birine Geçip Kaydını Yaptırabilirsin. \n\n<@&782501088402079747> seninle ilgilenicektir. \n\nHesabın Oluşturulma Tarihi: " +
-        moment(member.user.createdAt).format("`YYYY DD MMMM dddd`") +
-        "\n\n" +
-        kontrol +
-        "\n\nTagımızı alarak ` さ ` bize destek olabilirsin.**\n"
-    )
-    .setImage(
-      "https://i.pinimg.com/originals/2c/43/ac/2c43acd8c41ee853cf9fbb04960e4fa6.gif"
-    );
-  kanal.send(strigalog);
-  kanal.send(register);
-});
-
-//-----------------------HOŞ-GELDİN-MESAJI----------------------\\     STG
-
-//-----------------------OTO-TAG-----------------------\\     STG
-
-client.on("userUpdate", async (oldUser, newUser) => {
-  if (oldUser.username !== newUser.username) {
-    const tag = "さ";
-    const sunucu = "771452690784976916";
-    const kanal = "782554112734658570";
-    const rol = "782539554120400907";
-
-    try {
-      if (
-        newUser.username.includes(tag) &&
-        !client.guilds.cache
-          .get(sunucu)
-          .members.cache.get(newUser.id)
-          .roles.cache.has(rol)
-      ) {
-        await client.channels.cache
-          .get(kanal)
-          .send(
-            new Discord.MessageEmbed()
-              .setColor("GREEN")
-              .setDescription(
-                `${newUser} ${tag} Tagımızı Aldığı İçin <@&${rol}> Rolünü Verdim`
-              )
-          );
-        await client.guilds.cache
-          .get(sunucu)
-          .members.cache.get(newUser.id)
-          .roles.add(rol);
-        await client.guilds.cache
-          .get(sunucu)
-          .members.cache.get(newUser.id)
-          .send(
-            `Selam ${
-              newUser.username
-            }, Sunucumuzda ${tag} Tagımızı Aldığın İçin ${
-              client.guilds.cache.get(sunucu).roles.cache.get(rol).name
-            } Rolünü Sana Verdim!`
-          );
-      }
-      if (
-        !newUser.username.includes(tag) &&
-        client.guilds.cache
-          .get(sunucu)
-          .members.cache.get(newUser.id)
-          .roles.cache.has(rol)
-      ) {
-        await client.channels.cache
-          .get(kanal)
-          .send(
-            new Discord.MessageEmbed()
-              .setColor("RED")
-              .setDescription(
-                `${newUser} ${tag} Tagımızı Çıkardığı İçin <@&${rol}> Rolünü Aldım`
-              )
-          );
-        await client.guilds.cache
-          .get(sunucu)
-          .members.cache.get(newUser.id)
-          .roles.remove(rol);
-        await client.guilds.cache
-          .get(sunucu)
-          .members.cache.get(newUser.id)
-          .send(
-            `Selam **${
-              newUser.username
-            }**, Sunucumuzda ${tag} Tagımızı Çıkardığın İçin ${
-              client.guilds.cache.get(sunucu).roles.cache.get(rol).name
-            } Rolünü Senden Aldım!`
-          );
-      }
-    } catch (e) {
-      console.log(`Bir hata oluştu! ${e}`);
-    }
-  }
-});
-
-//Serendia'dan alınıp V12 Çevirilmiştir!
-
-//-----------------------OTO-TAG-----------------------\\     STG
-
-client.on("userUpdate", async (stg, yeni) => {
-  var sunucu = client.guilds.cache.get("771452690784976916"); // Buraya Sunucu ID
-  var uye = sunucu.members.cache.get(yeni.id);
-  var tag = "さ"; // Buraya Ekip Tag
-  var tagrol = "782539554120400907"; // Buraya Ekip Rolünün ID
-  var kanal = "782554112734658570"; // Loglanacağı Kanalın ID
-
-  if (
-    !sunucu.members.has(yeni.id) ||
-    yeni.bot ||
-    stg.username === yeni.username
-  )
-    return;
-
-  if (yeni.username.includes(tag) && !uye.roles.has(tagrol)) {
-    try {
-      await uye.roles.add(tagrol);
-      await uye.send(`Tagımızı aldığın için teşekkürler! Aramıza hoş geldin.`);
-      await client.channels.cache
-        .get(kanal)
-        .send(`${yeni} adlı üye tagımızı alarak aramıza katıldı!`);
-    } catch (err) {
-      console.error(err);
-    }
-  }
-
-  if (!yeni.username.includes(tag) && uye.roles.has(tagrol)) {
-    try {
-      await uye.roles.remove(
-        uye.roles.filter(
-          rol => rol.position >= sunucu.roles.get(tagrol).position
-        )
-      );
-      await uye.send(
-        `Tagımızı bıraktığın için ekip rolü ve yetkili rollerin alındı! Tagımızı tekrar alıp aramıza katılmak istersen;\nTagımız: **${tag}**`
-      );
-      await client.channels.cache
-        .get(kanal)
-        .send(`${yeni} adlı üye tagımızı bırakarak aramızdan ayrıldı!`);
-    } catch (err) {
-      console.error(err);
-    }
-  }
-});

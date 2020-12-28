@@ -1,17 +1,21 @@
-const Discord = require("discord.js");
-const config = require('../config.js');
-module.exports = async client => {
-  client.user.setPresence({ activity: { type: "WATCHING", name: `Piece ❤ Serendia Squad`}, status: 'idle' })
-};
+const chalk = require('chalk');
+const moment = require('moment');
+const Discord = require('discord.js');
+const ayarlar = require('../ayarlar.json');
 
-// Type kısımları:
-// WATCHING - İZLİYOR
-// PLAYING - OYNUYOR
-// LISTENING - DİNLİYOR
+var prefix = ayarlar.prefix;
 
-// Status kısımları:
-// online - çevrim içi
-// idle - boşta
-// dnd - rahatsız etmeyin
+module.exports = client => {
+  console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: Aktif, Komutlar yüklendi!`);
+  console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: ${client.user.username} ismi ile giriş yapıldı!`);
+  client.user.setStatus("online");
+   var oyun = [
+        "CodeArius.com Kayıt sistemi",
+        "CodeArius discord discord.gg/h6PPBmY"
+    ];
 
-// name kısmına oynuyorunuzu yazabilirsiniz.
+    setInterval(function() {
+        var random = Math.floor(Math.random()*(oyun.length-0+1)+0);
+        client.user.setActivity(oyun[random], "WATCHING");
+        }, 2 * 2500);
+}

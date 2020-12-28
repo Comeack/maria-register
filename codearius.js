@@ -111,62 +111,6 @@ client.elevation = message => {
     if (message.author.id === ayarlar.sahip) permlvl = 4;
     return permlvl;
 };
-
-//KAYIT MESAJ
-//NOT Kendi isteğinize göre burada ki yazıları değiştirin!
-client.on("guildMemberAdd", (member, message) => {
-  const sunucuid = "sunucuid"; //Sunucu id
-  const id = "kanalid"; //Kanal id
-  const jail = "jailrolid"; //jail rol id
-  const kayıtsız = "kayıtsızrolid"; //Kayıtsız rol id
-  let resim = "https://cdn.discordapp.com/icons/544527577768001538/a_1fa32517dd9fb1d265309255c635b2c0.gif"
-  if (member.guild.id !== sunucuid) return;
-  let aylartoplam = {
-    "01": "Ocak",
-    "02": "Şubat",
-    "03": "Mart",
-    "04": "Nisan",
-    "05": "Mayıs",
-    "06": "Haziran",
-    "07": "Temmuz",
-    "08": "Ağustos",
-    "09": "Eylül",
-    "10": "Ekim",
-    "11": "Kasım",
-    "12": "Aralık"
-  };
-  let aylar = aylartoplam;
-  let user = client.users.cache.get(member.id);
-  require("moment-duration-format");
-  let eskiNick = member.user.username;
-  const channel = member.guild.channels.cache.get(id);
-  const kurulus = new Date().getTime() - user.createdAt.getTime();
-  const gün = moment.duration(kurulus).format("D");
-   var kontrol;
-  if (gün < 14) {
-    kontrol = "Güvenilmeyen Kullanıcı!";
-    member.roles.add(kayıtsız)
-  }
-  if (gün > 14) {
-    kontrol = "Güvenilir Kullanıcı!";
-    member.roles.add(kayıtsız)
-  }
-  
-  let codearius = new Discord.MessageEmbed()
-  .setAuthor(`Yeni birisi spawn oldu!`)
-  .setDescription(`**Hoşgeldin!** ${member}
-
-seninle beraber **${member.guild.members.cache.size}** kişiyiz!
-
-Kayıt olmak için <@&757376445034266724> rolündeki yetkilileri etiketlemeyi unutma.`)
-  .addField('Hesap Oluşturma Tarihi', `\`${moment(user.createdAt).format("DD")} ${aylar[moment(user.createdAt).format("MM")]} ${moment(user.createdAt).format("YYYY")}\``, true)
-  .addField('Bu Hesap', `\`${kontrol}\``, true)
-  .setThumbnail(resim)
-  .setColor('BLUE')
-  .setTimestamp()
-  channel.send(codearius);
-  
-});
 //
 
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;

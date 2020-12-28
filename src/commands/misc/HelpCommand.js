@@ -21,7 +21,6 @@ module.exports = class HelpCommand extends BaseCommand {
       help.setDescription(`Avaliable commands for ${message.guild.me.displayName}\nPrefix: **${client.prefix}**`);
       help.addField(`**Misc [19]:**`, 'corona, creator, 8ball, gnome, help, instagram, math, meme, oceanman, ping, pokemon, poll, roll, serverinfo, steam, uptime, urban, userinfo, weather');
       help.addField(`**Mod [6]:**`, 'ban, clear, kick, mute, say, unmute');
-      help.addField(`**Music [8]:**`, 'leave, loop, nowplaying, pause, play, queue, remove, skip');
 
       return message.channel.send(help);
     } else{

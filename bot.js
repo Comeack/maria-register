@@ -130,7 +130,7 @@ client.on("guildMemberAdd", member => {
   if (kurulus < 1296000000) kontrol = '❌'
   if (kurulus > 1296000000) kontrol = '✅'
   moment.locale("tr");
-  kanal.send(":tada: Sunucumuza Hoş Geldin ! <@" + member + "> \n\n Hesabın "+ gecen +" Önce Oluşturulmuş "+kontrol+" \n\n Sunucu kurallarımız <#787645504800292905> kanalında belirtilmiştir. Unutma sunucu içerisinde ki ceza işlemlerin kuralları okuduğunu varsayarak gerçekleştirilecek. \n\n Seninle beraber " + member.guild.memberCount + " kişi olduk ! Tagımızı alarak bizlere destek olabilirsin ! Kayıt olmak için teyit odalarına girip ses teyit vermen gerekiyor <@&787645426873663538> seninle ilgilenecektir ! İyi eğlenceler.")
+  kanal.send(" Sunucumuza Hoş Geldin ! <@" + member + "> \n\n Hesabın "+ gecen +" Önce Oluşturulmuş "+kontrol+" \n\n Sunucu kurallarımız <#787645513486303232> kanalında belirtilmiştir. Unutma sunucu içerisinde ki ceza işlemlerin kuralları okuduğunu varsayarak gerçekleştirilecek. \n\n Seninle beraber " + member.guild.memberCount + " kişi olduk ! Tagımızı alarak bizlere destek olabilirsin ! Kayıt olmak için teyit odalarına girip ses teyit vermen gerekiyor <@&787645426873663538> seninle ilgilenecektir ! İyi eğlenceler.")
   });
   
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\     
@@ -148,8 +148,8 @@ client.on("guildMemberAdd", member => {
      var user = member.user
      x = x.replace("birkaç saniye önce", " ")
      if(!x.includes("önce") || x.includes("sonra") ||x == " ") {
-    const kytsz = member.guild.roles.cache.find(r => r.id === "KAYITSIZ ROL ID") 
-     var rol = member.guild.roles.cache.get("ŞÜPHELİ ROL ID") // ŞÜPHELİ HESAP ROLÜNÜN İDSİNİ GİRİN
+    const kytsz = member.guild.roles.cache.find(r => r.id === "787645445576458260") 
+     var rol = member.guild.roles.cache.get("787645453251903488") // ŞÜPHELİ HESAP ROLÜNÜN İDSİNİ GİRİN
      var kayıtsız = member.guild.roles.cache.get(kytsz) // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
      member.roles.add(rol)
      member.roles.remove(kytsz)
@@ -172,7 +172,7 @@ client.on("guildMemberAdd", member => {
 //-----------------------TAG-ROL----------------------\\     
 
 client.on("userUpdate", async (stg, yeni) => {
-  var sunucu = client.guilds.cache.get('SUNUCU ID'); // Buraya Sunucu ID
+  var sunucu = client.guilds.cache.get('787339522705719307'); // Buraya Sunucu ID
   var uye = sunucu.members.cache.get(yeni.id);
   var tag = "र"; // Buraya Ekip Tag
   var tagrol = "787645436855844875"; // Buraya Ekip Rolünün ID
@@ -200,7 +200,7 @@ client.on("userUpdate", async (stg, yeni) => {
 //----------------------TAG-KONTROL----------------------\\     
 
 client.on("guildMemberAdd", member => {
-  let sunucuid = "SUNUCU ID"; //Buraya sunucunuzun IDsini yazın
+  let sunucuid = "787339522705719307"; //Buraya sunucunuzun IDsini yazın
   let tag = "र"; //Buraya tagınızı yazın
   let rol = "789918939009777684"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
 if(member.user.username.includes(tag)){
@@ -214,3 +214,12 @@ member.roles.add(rol)
 })
 
 //-----------------------TAG-KONTROL----------------------\\     
+
+//BOTU SESE SOKMA
+client.on("ready", async function() {
+const voiceChannel = "kanal id"
+client.channels.cache.get(voiceChannel).join()
+.catch(err => {
+throw err;
+})
+})

@@ -39,7 +39,7 @@ x.roles.add(xy)
 x.roles.remove(kayıtsız)
 
 
-genelchat.send(`<@${member.id}>, Aramıza Hoş Geldin ! Umarım Keyifli Vakitler Geçirirsin.`)
+genelchat.send(`<@${member.id}> **Aramıza Hoş Geldin.** <a:kalp_3:792004742574243861>`)
 
 }
 

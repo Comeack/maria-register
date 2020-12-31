@@ -128,7 +128,7 @@ client.on("guildMemberAdd", member => {
   const gecen = moment
     .duration(kurulus)
     .format(
-      `YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`
+      `YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]`
     );
 
   var kontrol;
@@ -138,13 +138,13 @@ client.on("guildMemberAdd", member => {
   kanal.send(
     " <a:sinirsiz:790593963090116609> **Sunucumuza Hoş Geldin** <@" +
       member +
-      "> \n\n <a:sinirsiz:790593963090116609> Hesabın " +
+      "> \n\n <a:sinirsiz:790593963090116609> **Hesabın** " +
       gecen +
-      " Önce Oluşturulmuş " +
+      " **Önce Oluşturulmuş** " +
       kontrol +
       " \n\n <a:sinirsiz:790593963090116609> **Sunucu kurallarımız** <#787645513486303232> **kanalında yazıyor. Sunucuya geen herkez kurallari okumuş sayılır.** \n\n <a:sinirsiz:790593963090116609> **Seninle beraber **" +
       member.guild.memberCount +
-      " ** kişi olduk**\n\n<a:sinirsiz:790593963090116609> `र` Tagımızı alarak bizlere destek olabilirsin.**\n\n<a:sinirsiz:790593963090116609> **Kayıt olmak için teyit odalarına girip ses teyit vermen gerekiyor.**\n\n<a:sinirsiz:790593963090116609> **Kayit ekibimiz** <@&787645426873663538> **seninle ilgilenecektir.**"
+      " **kişi olduk**\n\n<a:sinirsiz:790593963090116609> `र` **Tagımızı alarak bizlere destek olabilirsin.**\n\n<a:sinirsiz:790593963090116609> **Kayıt olmak için teyit odalarına girip ses teyit vermen gerekiyor.**\n\n<a:sinirsiz:790593963090116609> **Kayit ekibimiz** <@&787645426873663538> **seninle ilgilenecektir.**"
   );
 });
 
@@ -200,13 +200,17 @@ client.on("userUpdate", async (stg, yeni) => {
   if (yeni.username.includes(tag) && !uye.roles.cache.has(tagrol)) {
     try {
       await uye.roles.add(tagrol);
-      await uye.send(`**Tagımızı aldığın için teşekkürler! Aramıza hoş geldin.**`);
+      await uye.send(
+        `**Tagımızı aldığın için teşekkürler! Aramıza hoş geldin.**`
+      );
       await client.channels.cache
         .get(logKanali)
         .send(
           new Discord.MessageEmbed()
             .setColor("GREEN")
-            .setDescription(`${yeni} **Adlı üye tagımızı alarak aramıza katıldı!**`)
+            .setDescription(
+              `${yeni} **Adlı üye tagımızı alarak aramıza katıldı!**`
+            )
         );
     } catch (err) {
       console.error(err);
@@ -248,9 +252,7 @@ client.on("guildMemberAdd", member => {
     member.roles.add(rol);
     const tagalma = new Discord.MessageEmbed()
       .setColor("GREEN")
-      .setDescription(
-        `<@${member.id}> **Adlı kullanıcı zaten tagımızdaymış**`
-      )
+      .setDescription(`<@${member.id}> **Adlı kullanıcı zaten tagımızdaymış**`)
       .setTimestamp();
     client.channels.cache.get("789918939009777684").send(tagalma);
   }

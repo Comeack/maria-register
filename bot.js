@@ -142,9 +142,9 @@ client.on("guildMemberAdd", member => {
       gecen +
       " Önce Oluşturulmuş " +
       kontrol +
-      " \n\n Sunucu kurallarımız <#787645513486303232> kanalında belirtilmiştir. Unutma sunucu içerisinde ki ceza işlemlerin kuralları okuduğunu varsayarak gerçekleştirilecek. \n\n Seninle beraber " +
+      " \n\n Sunucu kurallarımız <#787645513486303232> kanalında belirtilm \n\n **Seninle beraber **" +
       member.guild.memberCount +
-      " kişi olduk ! Tagımızı alarak bizlere destek olabilirsin ! Kayıt olmak için teyit odalarına girip ses teyit vermen gerekiyor <@&787645426873663538> seninle ilgilenecektir ! İyi eğlenceler."
+      " ** kişi olduk**\n\n `र` Tagımızı alarak bizlere destek olabilirsin.**\n\n**Kayıt olmak için teyit odalarına girip ses teyit vermen gerekiyor.**\n\n<a:sinirsiz:790593963090116609> **Kayit ekibimiz** <@&787645426873663538> **seninle ilgilenecektir.**"
   );
 });
 

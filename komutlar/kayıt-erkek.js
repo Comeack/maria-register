@@ -8,7 +8,7 @@ if(!["787645426873663538", ""].some(role => message.member.roles.cache.get(role)
 const erkek = message.guild.roles.cache.find(r => r.id === "787645444133748777")
 const xy = message.guild.roles.cache.find(r => r.id === "794139088664002640")
 const kayıtsız = message.guild.roles.cache.find(r => r.id === "787645445576458260")
-const reglog = message.guild.channels.cache.find(c => c.id === "")
+const reglog = message.guild.channels.cache.find(c => c.id === "794951795217530901")
 const genelchat = message.guild.channels.cache.find(g => g.id === "787645520121430026")
 
 const member = message.guild.member(message.mentions.members.first() || message.guild.members.cache.get(args[0]));

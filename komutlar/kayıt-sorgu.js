@@ -57,7 +57,7 @@ const kayıtlar3 = new Discord.MessageEmbed()
 • Toplam Erkek Kayıtların: \`${erkek1}\`
 • Toplam Kadın Kayıtların: \`${kadin1}\`
 `)
-.setColor("BLACV")
+.setColor("BLACK")
 return message.channel.send(kayıtlar3)
 }
 

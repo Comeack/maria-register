@@ -27,7 +27,7 @@ db.add(`yetkili.${message.author.id}.erkek`,1 )
 db.add(`yetkili.${message.author.id}.toplam`, 1)  
 let toplami = db.fetch(`yetkili.${message.author.id}.toplam`)  
 
-message.react('✅')
+message.react('<a:tik_4:792003235124346920>')
 x.setNickname(`${tag} ${isim} | ${yas}`)
 x.roles.add(erkek)
 x.roles.add(xy)

@@ -18,7 +18,7 @@ let toplami = db.fetch(`yetkili.${message.author.id}.toplam`)
 
 message.react('✅')
 
-message.channel.send(new Discord.MessageEmbed().setAuthor(`Kayıt Sıfırlandı`).setColor("0x2f3136").setDescription(`${member} Adlı Kullanıcının Db'si Silindi, <@${message.author.id}> Tarafından Sıfırlandı.`))
+message.channel.send(new Discord.MessageEmbed().setAuthor(`Kayıt Sıfırlandı`).setColor("BLACK").setDescription(`${member} Adlı Kullanıcının Db'si Silindi, <@${message.author.id}> Tarafından Sıfırlandı.`))
   
 
 }

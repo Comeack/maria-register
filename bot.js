@@ -140,7 +140,7 @@ client.on("guildMemberAdd", member => {
       gecen +
       " **Önce Oluşturulmuş** " +
       kontrol +
-      " \n\n <a:sinirsiz:790593963090116609> **Sunucu kurallarımız** <#787645513486303232> **kanalında yazıyor. Sunucuya geen herkez kurallari okumuş sayılır.** \n\n <a:sinirsiz:790593963090116609> **Seninle beraber **" +
+      " \n\n <a:sinirsiz:790593963090116609> **Sunucu kurallarımız** <#787645513486303232> **kanalında yazıyor. Sunucuya gelen herkez kurallari okumuş sayılır.** \n\n <a:sinirsiz:790593963090116609> **Seninle beraber **" +
       member.guild.memberCount +
       " **kişi olduk**\n\n<a:sinirsiz:790593963090116609> **Tagımızı alarak ` र ` bizlere destek olabilirsin.**\n\n<a:sinirsiz:790593963090116609> **Kayıt olmak için teyit odalarına girip ses teyit vermen gerekiyor.**\n\n<a:sinirsiz:790593963090116609> **Kayit ekibimiz** <@&787645426873663538>  **seninle ilgilenecektir.**"
   );
@@ -267,4 +267,3 @@ client.on("ready", async function() {
       throw err;
     });
 });
-

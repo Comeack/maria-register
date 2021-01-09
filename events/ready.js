@@ -15,6 +15,6 @@ module.exports = client => {
     } ismi ile giriş yapıldı!`
   );
   client.user.setStatus("online");
-  client.user.setActivity("Helia ❤️ Comeback", { type: "WATCHING" }); //// TYPE - WATCHING , PLAYING , LISTENING gibi değiştirilebilir.
+  client.user.setActivity("Helia Register", { type: "WATCHING" }); //// TYPE - WATCHING , PLAYING , LISTENING gibi değiştirilebilir.
   console.log(``);
 };

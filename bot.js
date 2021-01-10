@@ -142,7 +142,7 @@ client.on("guildMemberAdd", member => {
       kontrol +
       " \n\n <a:sinirsiz:790593963090116609> **Sunucu kurallarımız** <#787645513486303232> **kanalında yazıyor. Sunucuya gelen herkez kurallari okumuş sayılır.** \n\n <a:sinirsiz:790593963090116609> **Seninle beraber **" +
       member.guild.memberCount +
-      " **kişi olduk**\n\n<a:sinirsiz:790593963090116609> **Tagımızı alarak ` ☆ ` Kayıt olabilirsin**\n\n<a:sinirsiz:790593963090116609> **Şuanda Hidra taglı alımdadır.**\n\n<a:sinirsiz:790593963090116609> **Kayit ekibimiz** <@&797761256345174017>  **seninle ilgilenecektir.**"
+      " **kişi olduk**\n\n<a:sinirsiz:790593963090116609> **Tagımızı alarak ` ♱ ` Kayıt olabilirsin**\n\n<a:sinirsiz:790593963090116609> **Şuanda Hidra taglı alımdadır.**\n\n<a:sinirsiz:790593963090116609> **Kayit ekibimiz** <@&797761256345174017>  **seninle ilgilenecektir.**"
   );
 });
 
@@ -183,7 +183,7 @@ client.on("guildMemberAdd", member => {
 client.on("userUpdate", async (stg, yeni) => {
   var sunucu = client.guilds.cache.get("787339522705719307"); // Buraya Sunucu ID
   var uye = sunucu.members.cache.get(yeni.id);
-  var tag = "☆"; // Buraya Ekip Tag
+  var tag = "♱"; // Buraya Ekip Tag
   var tagrol = "797763931451555851"; // Buraya Ekip Rolünün ID
   var logKanali = "797763504115023892"; // Loglanacağı Kanalın ID
 
@@ -243,8 +243,8 @@ client.on("userUpdate", async (stg, yeni) => {
 
 client.on("guildMemberAdd", member => {
   let sunucuid = "787339522705719307"; //Buraya sunucunuzun IDsini yazın
-  let tag = "☆"; //Buraya tagınızı yazın
-  let rol = "☆│Booster øf Hidra"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
+  let tag = "♱"; //Buraya tagınızı yazın
+  let rol = "797763931451555851"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
   if (member.user.username.includes(tag)) {
     member.roles.add(rol);
     const tagalma = new Discord.MessageEmbed()

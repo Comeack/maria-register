@@ -140,7 +140,7 @@ client.on("guildMemberAdd", member => {
       gecen +
       " **Önce Oluşturulmuş** " +
       kontrol +
-      " \n\n  **Sunucu kurallarımız** <#787645513486303232> **kanalında yazıyor. Sunucuya gelen herkez kurallari okumuş sayılır.** \n\n **Seninle beraber **" +
+      "\n\n **Seninle beraber **" +
       member.guild.memberCount +
       " **kişi olduk**\n\n **Tagımızı alarak ` र ` Kayıt olabilirsin**\n\n **Şuanda Hidra taglı alımdadır.**\n\n **Kayit ekibimiz** <@&797761256345174017>  **seninle ilgilenecektir.**"
   );

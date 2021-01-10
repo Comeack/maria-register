@@ -142,7 +142,7 @@ client.on("guildMemberAdd", member => {
       kontrol +
       "\n\n **Seninle beraber **" +
       member.guild.memberCount +
-      " **kişi olduk**\n\n **Tagımızı alarak ` र ` Kayıt olabilirsin**\n\n **Şuanda Hidra taglı alımdadır.**\n\n **Kayit ekibimiz** <@&797761256345174017>  **seninle ilgilenecektir.**"
+      " **kişi olduk**\n\n **Tagımızı alarak ` र ` Kayıt olabilirsin**\n\n **Şuanda Hidra taglı alımdadır.**\n\n **Kayit ekibimiz** <@&797898422975070270>  **seninle ilgilenecektir.**"
   );
 });
 

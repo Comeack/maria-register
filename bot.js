@@ -142,7 +142,7 @@ client.on("guildMemberAdd", member => {
       kontrol +
       " \n\n <a:sinirsiz:790593963090116609> **Sunucu kurallarımız** <#787645513486303232> **kanalında yazıyor. Sunucuya gelen herkez kurallari okumuş sayılır.** \n\n <a:sinirsiz:790593963090116609> **Seninle beraber **" +
       member.guild.memberCount +
-      " **kişi olduk**\n\n<a:sinirsiz:790593963090116609> **Tagımızı alarak ` ☆ ` Kayıt olabilirsin**\n\n<a:sinirsiz:790593963090116609> **Şuanda Hidra taglı alımdadır.**\n\n<a:sinirsiz:790593963090116609> **Kayit ekibimiz** <@&787645426873663538>  **seninle ilgilenecektir.**"
+      " **kişi olduk**\n\n<a:sinirsiz:790593963090116609> **Tagımızı alarak ` ☆ ` Kayıt olabilirsin**\n\n<a:sinirsiz:790593963090116609> **Şuanda Hidra taglı alımdadır.**\n\n<a:sinirsiz:790593963090116609> **Kayit ekibimiz** <@&797761256345174017>  **seninle ilgilenecektir.**"
   );
 });
 

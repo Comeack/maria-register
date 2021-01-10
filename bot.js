@@ -119,7 +119,7 @@ client.login(ayarlar.token);
 
 client.on("guildMemberAdd", member => {
   const kanal = member.guild.channels.cache.find(
-    r => r.id === "787645506343927869"
+    r => r.id === "797743539479904267"
   );
 
   let user = client.users.cache.get(member.id);
@@ -134,7 +134,7 @@ client.on("guildMemberAdd", member => {
   if (kurulus > 1296000000) kontrol = "";
   moment.locale("tr");
   kanal.send(
-    " <a:sinirsiz:790593963090116609> **Sunucumuza Hoş Geldin** <@" +
+    " <a:sinirsiz:790593963090116609> **Hidra Sunucumuza Hoş Geldin** <@" +
       member +
       "> \n\n <a:sinirsiz:790593963090116609> **Hesabın** " +
       gecen +
@@ -142,7 +142,7 @@ client.on("guildMemberAdd", member => {
       kontrol +
       " \n\n <a:sinirsiz:790593963090116609> **Sunucu kurallarımız** <#787645513486303232> **kanalında yazıyor. Sunucuya gelen herkez kurallari okumuş sayılır.** \n\n <a:sinirsiz:790593963090116609> **Seninle beraber **" +
       member.guild.memberCount +
-      " **kişi olduk**\n\n<a:sinirsiz:790593963090116609> **Tagımızı alarak `  ` bizlere destek olabilirsin.**\n\n<a:sinirsiz:790593963090116609> **Kayıt olmak için teyit odalarına girip ses teyit vermen gerekiyor.**\n\n<a:sinirsiz:790593963090116609> **Kayit ekibimiz** <@&787645426873663538>  **seninle ilgilenecektir.**"
+      " **kişi olduk**\n\n<a:sinirsiz:790593963090116609> **Tagımızı alarak ` ☆ ` Kayıt olabilirsin**\n\n<a:sinirsiz:790593963090116609> **Şuanda Hidra taglı alımdadır.**\n\n<a:sinirsiz:790593963090116609> **Kayit ekibimiz** <@&787645426873663538>  **seninle ilgilenecektir.**"
   );
 });
 
@@ -162,9 +162,9 @@ client.on("guildMemberAdd", member => {
   x = x.replace("birkaç saniye önce", " ");
   if (!x.includes("önce") || x.includes("sonra") || x == " ") {
     const kytsz = member.guild.roles.cache.find(
-      r => r.id === "787645445576458260"
+      r => r.id === "797733273954549780"
     );
-    var rol = member.guild.roles.cache.get("787645453251903488"); // ŞÜPHELİ HESAP ROLÜNÜN İDSİNİ GİRİN
+    var rol = member.guild.roles.cache.get("797764634467762186"); // ŞÜPHELİ HESAP ROLÜNÜN İDSİNİ GİRİN
     var kayıtsız = member.guild.roles.cache.get(kytsz); // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
     member.roles.add(rol);
     member.roles.remove(kytsz);
@@ -183,9 +183,9 @@ client.on("guildMemberAdd", member => {
 client.on("userUpdate", async (stg, yeni) => {
   var sunucu = client.guilds.cache.get("787339522705719307"); // Buraya Sunucu ID
   var uye = sunucu.members.cache.get(yeni.id);
-  var tag = "र"; // Buraya Ekip Tag
-  var tagrol = "787645436855844875"; // Buraya Ekip Rolünün ID
-  var logKanali = "789918939009777684"; // Loglanacağı Kanalın ID
+  var tag = "☆"; // Buraya Ekip Tag
+  var tagrol = "797763931451555851"; // Buraya Ekip Rolünün ID
+  var logKanali = "797763504115023892"; // Loglanacağı Kanalın ID
 
   if (
     !sunucu.members.cache.has(yeni.id) ||
@@ -243,15 +243,15 @@ client.on("userUpdate", async (stg, yeni) => {
 
 client.on("guildMemberAdd", member => {
   let sunucuid = "787339522705719307"; //Buraya sunucunuzun IDsini yazın
-  let tag = "र"; //Buraya tagınızı yazın
-  let rol = "789918939009777684"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
+  let tag = "☆"; //Buraya tagınızı yazın
+  let rol = "☆│Booster øf Hidra"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
   if (member.user.username.includes(tag)) {
     member.roles.add(rol);
     const tagalma = new Discord.MessageEmbed()
       .setColor("GREEN")
       .setDescription(`<@${member.id}> **Adlı kullanıcı zaten tagımızdaymış**`)
       .setTimestamp();
-    client.channels.cache.get("789918939009777684").send(tagalma);
+    client.channels.cache.get("797763504115023892").send(tagalma);
   }
 });
 

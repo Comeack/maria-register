@@ -9,7 +9,7 @@ const kadin = message.guild.roles.cache.find(r => r.id === "795915869389717544")
 const xx = message.guild.roles.cache.find(r => r.id === "795915859801145364")
 const kayıtsız = message.guild.roles.cache.find(r => r.id === "795915871280168991")
 const reglog = message.guild.channels.cache.find(c => c.id === "797898238816550982")
-const genelchat = message.guild.channels.cache.find(g => g.id === "797728037260361738")
+const genelchat = message.guild.channels.cache.find(g => g.id === "795915997034446889")
 
 const member = message.guild.member(message.mentions.members.first() || message.guild.members.cache.get(args[0]));
 if(!member) return message.channel.send(`Bir Kullanıcı Belirt.`)
@@ -39,7 +39,7 @@ x.roles.add(xx)
 x.roles.remove(kayıtsız)
 
 
-genelchat.send(`<@${member.id}> **Aramıza Hoş Geldin.** <a:kalp_3:792004742574243861>`)
+genelchat.send(`<@${member.id}> **Aramıza Hoş Geldin.** `)
 
 }
 

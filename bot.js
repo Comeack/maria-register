@@ -119,7 +119,7 @@ client.login(ayarlar.token);
 
 client.on("guildMemberAdd", member => {
   const kanal = member.guild.channels.cache.find(
-    r => r.id === "797743539479904267"
+    r => r.id === "795915967036653588"
   );
 
   let user = client.users.cache.get(member.id);
@@ -242,16 +242,16 @@ client.on("userUpdate", async (stg, yeni) => {
 //----------------------TAG-KONTROL----------------------\\
 
 client.on("guildMemberAdd", member => {
-  let sunucuid = "787339522705719307"; //Buraya sunucunuzun IDsini yazın
+  let sunucuid = "793057418099425340"; //Buraya sunucunuzun IDsini yazın
   let tag = "र"; //Buraya tagınızı yazın
-  let rol = "79763931451555851"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
+  let rol = "797902001241194546"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
   if (member.user.username.includes(tag)) {
     member.roles.add(rol);
     const tagalma = new Discord.MessageEmbed()
       .setColor("GREEN")
       .setDescription(`<@${member.id}> **Adlı kullanıcı zaten tagımızdaymış**`)
       .setTimestamp();
-    client.channels.cache.get("797763504115023892").send(tagalma);
+    client.channels.cache.get("797902307404152902").send(tagalma);
   }
 });
 

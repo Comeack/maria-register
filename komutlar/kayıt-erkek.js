@@ -38,7 +38,7 @@ x.roles.add(erkek)
 x.roles.add(xy)
 x.roles.remove(kayıtsız)
 
-reglog.send(`Kayıdınız başarıyla yapıldı aq`)
+
 genelchat.send(`<@${member.id}> **Aramıza Hoş Geldin.** <a:kalp_1:798150464754548746>`)
 
 }

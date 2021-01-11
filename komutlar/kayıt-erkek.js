@@ -3,13 +3,13 @@ const db = require('quick.db')
 
 exports.run = async (client, message, args) => {
   
-if(!["797898422975070270"].some(role => message.member.roles.cache.get(role)) && (!message.member.hasPermission("ADMINISTRATOR"))) return message.channel.send(`Bu Komutu Kullanabilmek İçin Yetkin Bulunmuyor.`)
+if(!["798090394562330636"].some(role => message.member.roles.cache.get(role)) && (!message.member.hasPermission("ADMINISTRATOR"))) return message.channel.send(`Bu Komutu Kullanabilmek İçin Yetkin Bulunmuyor.`)
   
-const erkek = message.guild.roles.cache.find(r => r.id === "795915870139449354")
-const xy = message.guild.roles.cache.find(r => r.id === "795915892516716574")
-const kayıtsız = message.guild.roles.cache.find(r => r.id === "795915871280168991")
-const reglog = message.guild.channels.cache.find(c => c.id === "797898238816550982")
-const genelchat = message.guild.channels.cache.find(g => g.id === "795915997034446889")
+const erkek = message.guild.roles.cache.find(r => r.id === "798090415705292822")
+const xy = message.guild.roles.cache.find(r => r.id === "798090416830021693")
+const kayıtsız = message.guild.roles.cache.find(r => r.id === "798090418126323713")
+const reglog = message.guild.channels.cache.find(c => c.id === "798090481980014614")
+const genelchat = message.guild.channels.cache.find(g => g.id === "798090500191944724")
 
 const member = message.guild.member(message.mentions.members.first() || message.guild.members.cache.get(args[0]));
 if(!member) return message.channel.send(`Bir Kullanıcı Belirt.`)

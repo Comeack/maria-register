@@ -186,7 +186,7 @@ client.on("guildMemberAdd", member => {
 
 client.on("guildMemberAdd", member => {
 
-if(member.user.username.includes("yasaklı tag")){
+if(member.user.username.includes("✰")){
 member.roles.add("798090421589770282")
 member.roles.remove("798090418126323713")
 member.send("Sunucumuzun Yasaklı Tagında Bulunuyorsunuz!")

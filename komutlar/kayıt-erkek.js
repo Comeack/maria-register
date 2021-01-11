@@ -5,9 +5,9 @@ exports.run = async (client, message, args) => {
   
 if(!["798090394562330636"].some(role => message.member.roles.cache.get(role)) && (!message.member.hasPermission("ADMINISTRATOR"))) return message.channel.send(`Bu Komutu Kullanabilmek İçin Yetkin Bulunmuyor.`)
   
-const erkek = message.guild.roles.cache.find(r => r.id === "798090415705292822")
-const xy = message.guild.roles.cache.find(r => r.id === "798090416830021693")
-const kayıtsız = message.guild.roles.cache.find(r => r.id === "798090418126323713")
+const erkek = message.guild.roles.cache.find(r => r.id === "798257045442527272")
+const xy = message.guild.roles.cache.find(r => r.id === "798257044301152257")
+const kayıtsız = message.guild.roles.cache.find(r => r.id === "798257046914334731")
 const reglog = message.guild.channels.cache.find(c => c.id === "798090481980014614")
 const genelchat = message.guild.channels.cache.find(g => g.id === "798090500191944724")
 
@@ -38,7 +38,7 @@ x.roles.add(erkek)
 x.roles.add(xy)
 x.roles.remove(kayıtsız)
 
-
+reglog.send(``)
 genelchat.send(`<@${member.id}> **Aramıza Hoş Geldin.** <a:kalp_1:798150464754548746>`)
 
 }

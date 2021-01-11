@@ -7,7 +7,7 @@ if(!["798090394562330636"].some(role => message.member.roles.cache.get(role)) &&
   
 const kadin = message.guild.roles.cache.find(r => r.id === "798090414107525141")
 const xx = message.guild.roles.cache.find(r => r.id === "798090414925283330")
-const kayıtsız = message.guild.roles.cache.find(r => r.id === "798090418126323713")
+const kayıtsız = message.guild.roles.cache.find(r => r.id === "798257046914334731")
 const reglog = message.guild.channels.cache.find(c => c.id === "798090481980014614")
 const genelchat = message.guild.channels.cache.find(g => g.id === "798090500191944724")
 

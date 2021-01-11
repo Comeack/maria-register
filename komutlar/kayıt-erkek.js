@@ -7,7 +7,7 @@ if(!["798090394562330636"].some(role => message.member.roles.cache.get(role)) &&
   
 const erkek = message.guild.roles.cache.find(r => r.id === "798257045442527272")
 const xy = message.guild.roles.cache.find(r => r.id === "798257044301152257")
-//const xy = message.guild.roles.cache.find(r => r.id === "798257044301152257")
+//const erkek2 = message.guild.roles.cache.find(r => r.id === "798257044301152257")
 const kayıtsız = message.guild.roles.cache.find(r => r.id === "798257046914334731")
 const reglog = message.guild.channels.cache.find(c => c.id === "798257139944652851")
 const genelchat = message.guild.channels.cache.find(g => g.id === "798090500191944724")
@@ -32,11 +32,13 @@ message.react('✅')
 x.setNickname(`${tag} ${isim} | ${yas}`)
 x.roles.add(erkek)
 x.roles.add(xy)
+//x.erkek.add(erkek2)
 x.roles.remove(kayıtsız)
 //
 x.setNickname(`${tag} ${isim} | ${yas}`)
 x.roles.add(erkek)
 x.roles.add(xy)
+//x.erkek.add(erkek2)
 x.roles.remove(kayıtsız)
 
 

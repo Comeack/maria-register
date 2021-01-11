@@ -187,7 +187,7 @@ client.on("guildMemberAdd", member => {
 client.on("userUpdate", async (stg, yeni) => {
   var sunucu = client.guilds.cache.get("793057418099425340"); // Buraya Sunucu ID
   var uye = sunucu.members.cache.get(yeni.id);
-  var tag = "र"; // Buraya Ekip Tag
+  var tag = "✸"; // Buraya Ekip Tag
   var tagrol = "798090406134415391"; // Buraya Ekip Rolünün ID
   var logKanali = "798090547558219776"; // Loglanacağı Kanalın ID
 
@@ -247,7 +247,7 @@ client.on("userUpdate", async (stg, yeni) => {
 
 client.on("guildMemberAdd", member => {
   let sunucuid = "793057418099425340"; //Buraya sunucunuzun IDsini yazın
-  let tag = "र"; //Buraya tagınızı yazın
+  let tag = "✸"; //Buraya tagınızı yazın
   let rol = "798090406134415391"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
   if (member.user.username.includes(tag)) {
     member.roles.add(rol);

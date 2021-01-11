@@ -15,6 +15,6 @@ module.exports = client => {
     } ismi ile giriş yapıldı!`
   );
   client.user.setStatus("online");
-  client.user.setActivity("Matria Register", { type: "WATCHING" }); //// TYPE - WATCHING , PLAYING , LISTENING gibi değiştirilebilir.
+  client.user.setActivity("MAЯIΛ REGİSTER", { type: "WATCHING" }); //// TYPE - WATCHING , PLAYING , LISTENING gibi değiştirilebilir.
   console.log(``);
 };

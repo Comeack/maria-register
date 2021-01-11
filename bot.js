@@ -134,15 +134,15 @@ client.on("guildMemberAdd", member => {
   if (kurulus > 1296000000) kontrol = "";
   moment.locale("tr");
   kanal.send(
-    "**Hidra Sunucumuza Hoş Geldin** <@" +
+    "<a:Sonsuzluk_6:798148906441375754> **Hidra Sunucumuza Hoş Geldin** <@" +
       member +
-      "> \n\n**Hesabın** " +
+      "> \n\n<a:Sonsuzluk_6:798148906441375754> **Hesabın** " +
       gecen +
       "**Önce Oluşturulmuş** " +
       kontrol +
-      "\n\n**Seninle beraber **" +
+      "\n\n<a:Sonsuzluk_6:798148906441375754> **Seninle beraber **" +
       member.guild.memberCount +
-      "**kişi olduk**\n\n**Tagımızı alarak ` र ` Kayıt olabilirsin**\n\n**Şuanda Hidra taglı alımdadır.**\n\n**Kayit ekibimiz** <@&797898422975070270>  **seninle ilgilenecektir.**"
+      "**kişi olduk**\n\n<a:Sonsuzluk_6:798148906441375754> **Tagımızı alarak ` ✸ ` Kayıt olabilirsin**\n\n<a:Sonsuzluk_6:798148906441375754> **Şuanda MAЯIΛ #TAGALIM alımdadır.**\n\n<a:Sonsuzluk_6:798148906441375754>  **Kayit ekibimiz** <@&798090394562330636>  **seninle ilgilenecektir.**"
   );
 });
 

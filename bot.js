@@ -166,9 +166,9 @@ client.on("guildMemberAdd", member => {
   x = x.replace("birkaç saniye önce", " ");
   if (!x.includes("önce") || x.includes("sonra") || x == " ") {
     const kytsz = member.guild.roles.cache.find(
-      r => r.id === "795915871280168991"
+      r => r.id === "798090418126323713"
     );
-    var rol = member.guild.roles.cache.get("795915856826990592"); // ŞÜPHELİ HESAP ROLÜNÜN İDSİNİ GİRİN
+    var rol = member.guild.roles.cache.get("798090421195505664"); // ŞÜPHELİ HESAP ROLÜNÜN İDSİNİ GİRİN
     var kayıtsız = member.guild.roles.cache.get(kytsz); // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
     member.roles.add(rol);
     member.roles.remove(kytsz);

@@ -119,7 +119,7 @@ client.login(ayarlar.token);
 
 client.on("guildMemberAdd", member => {
   const kanal = member.guild.channels.cache.find(
-    r => r.id === "795915967036653588"
+    r => r.id === "798090481980014614"
   );
 
   let user = client.users.cache.get(member.id);

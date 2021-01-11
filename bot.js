@@ -182,6 +182,17 @@ client.on("guildMemberAdd", member => {
 });
 //------------------------------------------------------------------------------------------------------------------------------------\\
 
+//YASAKLI TAG
+
+client.on("guildMemberAdd", member => {
+
+if(member.user.username.includes("yasaklı tag")){
+member.roles.add("798090421589770282")
+member.roles.remove("798090418126323713")
+member.send("Sunucumuzun Yasaklı Tagında Bulunuyorsunuz!")
+}
+});
+
 //-----------------------TAG-ROL----------------------\\
 
 client.on("userUpdate", async (stg, yeni) => {

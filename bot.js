@@ -138,11 +138,11 @@ client.on("guildMemberAdd", member => {
       member +
       "> \n\n<a:Sonsuzluk_6:798148906441375754> **Hesabın** " +
       gecen +
-      "**Önce Oluşturulmuş** " +
+      " **Önce Oluşturulmuş** " +
       kontrol +
-      "\n\n<a:Sonsuzluk_6:798148906441375754> **Seninle beraber **" +
+      "\n\n<a:Sonsuzluk_6:798148906441375754> **Seninle beraber** " +
       member.guild.memberCount +
-      "**kişi olduk**\n\n<a:Sonsuzluk_6:798148906441375754> **Tagımızı alarak ` ✸ ` Kayıt olabilirsin**\n\n<a:Sonsuzluk_6:798148906441375754> **Şuanda MAЯIΛ #TAGALIM alımdadır.**\n\n<a:Sonsuzluk_6:798148906441375754>  **Kayit ekibimiz** <@&798090394562330636>  **seninle ilgilenecektir.**"
+      " **kişi olduk**\n\n<a:Sonsuzluk_6:798148906441375754> **Tagımızı alarak ` ✸ ` Kayıt olabilirsin**\n\n<a:Sonsuzluk_6:798148906441375754> **Şuanda MAЯIΛ #TAGALIM alımdadır.**\n\n<a:Sonsuzluk_6:798148906441375754>  **Kayit ekibimiz** <@&798090394562330636>  **seninle ilgilenecektir.**"
   );
 });
 
@@ -237,7 +237,7 @@ client.on("userUpdate", async (stg, yeni) => {
         )
       );
       await uye.send(
-        `**Tagımızı bıraktığın için ekip rolü ve yetkili rollerin alındı**\n\n **Tagımızı tekrar alıp aramıza katılmak istersen;**\n**Tagımız:** ${tag}`
+        `**Tagımızı bıraktığın için ekip rolü ve yetkili rollerin alındı**\n\n**Tagımızı tekrar alıp aramıza katılmak istersen;**\n**Tagımız:** ${tag}`
       );
       await client.channels.cache
         .get(logKanali)

@@ -147,6 +147,10 @@ client.on("guildMemberAdd", member => {
 });
 
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\
+//gelene rol
+client.on("guildMemberAdd", member => {
+  member.roles.add('798090418126323713'); // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
+});
 
 //------------------------------------------------------------------------------------------------------------------------------------\\
 
@@ -184,8 +188,8 @@ client.on("userUpdate", async (stg, yeni) => {
   var sunucu = client.guilds.cache.get("793057418099425340"); // Buraya Sunucu ID
   var uye = sunucu.members.cache.get(yeni.id);
   var tag = "र"; // Buraya Ekip Tag
-  var tagrol = "797902001241194546"; // Buraya Ekip Rolünün ID
-  var logKanali = "797902307404152902"; // Loglanacağı Kanalın ID
+  var tagrol = "798090406134415391"; // Buraya Ekip Rolünün ID
+  var logKanali = "798090547558219776"; // Loglanacağı Kanalın ID
 
   if (
     !sunucu.members.cache.has(yeni.id) ||
@@ -244,14 +248,14 @@ client.on("userUpdate", async (stg, yeni) => {
 client.on("guildMemberAdd", member => {
   let sunucuid = "793057418099425340"; //Buraya sunucunuzun IDsini yazın
   let tag = "र"; //Buraya tagınızı yazın
-  let rol = "797902001241194546"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
+  let rol = "798090406134415391"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
   if (member.user.username.includes(tag)) {
     member.roles.add(rol);
     const tagalma = new Discord.MessageEmbed()
       .setColor("GREEN")
       .setDescription(`<@${member.id}> **Adlı kullanıcı zaten tagımızdaymış**`)
       .setTimestamp();
-    client.channels.cache.get("797902307404152902").send(tagalma);
+    client.channels.cache.get("798090547558219776").send(tagalma);
   }
 });
 
@@ -259,7 +263,7 @@ client.on("guildMemberAdd", member => {
 
 //BOTU SESE SOKMA
 client.on("ready", async function() {
-  const voiceChannel = "789535294872354846";
+  const voiceChannel = "798090504305770506";
   client.channels.cache
     .get(voiceChannel)
     .join()

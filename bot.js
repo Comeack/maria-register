@@ -118,16 +118,17 @@ client.login(ayarlar.token);
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\
 
 client.on("guildMemberAdd", member => {
-  const kanal = member.guild.channels.cache.find(
+ const kanal = member.guild.channels.cache.find(
     r => r.id === "798257138996609102"
-  );
+  
+);
 
   let user = client.users.cache.get(member.id);
   require("moment-duration-format");
   const kurulus = new Date().getTime() - user.createdAt.getTime();
   const gecen = moment
     .duration(kurulus)
-    .format(`\`YY [Yıl,] MM [Ay,] DD [Gün,] HH [Saat,]\``);
+    .format(`YY [Yıl,] MM [Ay,] DD [Gün]`);
 
   var kontrol;
   if (kurulus < 1296000000) kontrol = "";
@@ -145,10 +146,13 @@ client.on("guildMemberAdd", member => {
 });
 
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\
-//gelene rol
+
+//-----------------------OTO ROL VERME ----------------------\\
 client.on("guildMemberAdd", member => {
-  member.roles.add('798257046914334731'); // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
+  member.roles.add('798257046914334731'); // aq buğrası ikide bir dc patlıyor şuraya ıd girersin unregister
 });
+
+//-----------------------OTO ROL VERME ----------------------\\
 
 //------------------------------------------------------------------------------------------------------------------------------------\\
 

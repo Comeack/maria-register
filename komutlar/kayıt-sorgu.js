@@ -66,11 +66,11 @@ return message.channel.send(kayıtlar3)
 exports.conf = {
     enabled: true,
     guildOnly: true,
-    aliases: ["stat", "kayıtlar", "kayıt-kontrol"],
+    aliases: ["kayıtlar", "kayıtlar", "kayıt-kontrol"],
     permLvl: 0,
 }
 
 exports.help = {
-      name: "stat"
+      name: "kayıtlar"
   
 }

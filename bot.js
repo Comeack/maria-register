@@ -142,7 +142,7 @@ client.on("guildMemberAdd", member => {
       kontrol +
       "\n\n<a:Sonsuzluk_6:798148906441375754> **Seninle beraber** " +
       member.guild.memberCount +
-      " **kişi olduk**\n\n<a:Sonsuzluk_6:798148906441375754> **Tagımızı alarak ` ✸ ` Kayıt olabilirsin**\n\n<a:Sonsuzluk_6:798148906441375754> **Şuanda MAЯIΛ #TAGALIM alımdadır.**\n\n<a:Sonsuzluk_6:798148906441375754>  **Kayit ekibimiz** <@&798090394562330636>  **seninle ilgilenecektir.**"
+      " **kişi olduk**\n\n<a:Sonsuzluk_6:798148906441375754> **Tagımızı alarak ` र ` Kayıt olabilirsin**\n\n<a:Sonsuzluk_6:798148906441375754> **Şuanda MAЯIΛ #TAGALIM alımdadır.**\n\n<a:Sonsuzluk_6:798148906441375754>  **Kayit ekibimiz** <@&798090394562330636>  **seninle ilgilenecektir.**"
   );
 });
 
@@ -198,7 +198,7 @@ member.send("Sunucumuzun Yasaklı Tagında Bulunuyorsunuz!")
 client.on("userUpdate", async (stg, yeni) => {
   var sunucu = client.guilds.cache.get("793057418099425340"); // Buraya Sunucu ID
   var uye = sunucu.members.cache.get(yeni.id);
-  var tag = "✸"; // Buraya Ekip Tag
+  var tag = "र"; // Buraya Ekip Tag
   var tagrol = "798257034180165642"; // Buraya Ekip Rolünün ID
   var logKanali = "798257182277632010"; // Loglanacağı Kanalın ID
 
@@ -258,7 +258,7 @@ client.on("userUpdate", async (stg, yeni) => {
 
 client.on("guildMemberAdd", member => {
   let sunucuid = "793057418099425340"; //Buraya sunucunuzun IDsini yazın
-  let tag = "✸"; //Buraya tagınızı yazın
+  let tag = "र"; //Buraya tagınızı yazın
   let rol = "798257034180165642"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
   if (member.user.username.includes(tag)) {
     member.roles.add(rol);
@@ -274,7 +274,7 @@ client.on("guildMemberAdd", member => {
 
 //BOTU SESE SOKMA
 client.on("ready", async function() {
-  const voiceChannel = "798257141961195590";
+  const voiceChannel = "798257176749408307";
   client.channels.cache
     .get(voiceChannel)
     .join()

@@ -119,7 +119,7 @@ client.login(ayarlar.token);
 
 client.on("guildMemberAdd", member => {
   const kanal = member.guild.channels.cache.find(
-    r => r.id === "798090481980014614"
+    r => r.id === "798257138996609102"
   );
 
   let user = client.users.cache.get(member.id);
@@ -149,7 +149,7 @@ client.on("guildMemberAdd", member => {
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\
 //gelene rol
 client.on("guildMemberAdd", member => {
-  member.roles.add('798090418126323713'); // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
+  member.roles.add('798257046914334731'); // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
 });
 
 //------------------------------------------------------------------------------------------------------------------------------------\\
@@ -166,9 +166,9 @@ client.on("guildMemberAdd", member => {
   x = x.replace("birkaç saniye önce", " ");
   if (!x.includes("önce") || x.includes("sonra") || x == " ") {
     const kytsz = member.guild.roles.cache.find(
-      r => r.id === "798090418126323713"
+      r => r.id === "798257046914334731"
     );
-    var rol = member.guild.roles.cache.get("798090421195505664"); // ŞÜPHELİ HESAP ROLÜNÜN İDSİNİ GİRİN
+    var rol = member.guild.roles.cache.get("798257050114719745"); // ŞÜPHELİ HESAP ROLÜNÜN İDSİNİ GİRİN
     var kayıtsız = member.guild.roles.cache.get(kytsz); // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
     member.roles.add(rol);
     member.roles.remove(kytsz);
@@ -187,8 +187,8 @@ client.on("guildMemberAdd", member => {
 client.on("guildMemberAdd", member => {
 
 if(member.user.username.includes("✰")){
-member.roles.add("798090421589770282")
-member.roles.remove("798090418126323713")
+member.roles.add("798257050962493471")
+member.roles.remove("798257046914334731")
 member.send("Sunucumuzun Yasaklı Tagında Bulunuyorsunuz!")
 }
 });
@@ -199,8 +199,8 @@ client.on("userUpdate", async (stg, yeni) => {
   var sunucu = client.guilds.cache.get("793057418099425340"); // Buraya Sunucu ID
   var uye = sunucu.members.cache.get(yeni.id);
   var tag = "✸"; // Buraya Ekip Tag
-  var tagrol = "798090406134415391"; // Buraya Ekip Rolünün ID
-  var logKanali = "798090547558219776"; // Loglanacağı Kanalın ID
+  var tagrol = "798257034180165642"; // Buraya Ekip Rolünün ID
+  var logKanali = "798257182277632010"; // Loglanacağı Kanalın ID
 
   if (
     !sunucu.members.cache.has(yeni.id) ||
@@ -259,14 +259,14 @@ client.on("userUpdate", async (stg, yeni) => {
 client.on("guildMemberAdd", member => {
   let sunucuid = "793057418099425340"; //Buraya sunucunuzun IDsini yazın
   let tag = "✸"; //Buraya tagınızı yazın
-  let rol = "798090406134415391"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
+  let rol = "798257034180165642"; //Buraya tag alındığı zaman verilecek rolün IDsini yazın
   if (member.user.username.includes(tag)) {
     member.roles.add(rol);
     const tagalma = new Discord.MessageEmbed()
       .setColor("GREEN")
       .setDescription(`<@${member.id}> **Adlı kullanıcı zaten tagımızdaymış**`)
       .setTimestamp();
-    client.channels.cache.get("798090547558219776").send(tagalma);
+    client.channels.cache.get("798257182277632010").send(tagalma);
   }
 });
 
@@ -274,7 +274,7 @@ client.on("guildMemberAdd", member => {
 
 //BOTU SESE SOKMA
 client.on("ready", async function() {
-  const voiceChannel = "798090504305770506";
+  const voiceChannel = "798257141961195590";
   client.channels.cache
     .get(voiceChannel)
     .join()

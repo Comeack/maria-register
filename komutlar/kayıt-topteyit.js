@@ -3,7 +3,7 @@ const db = require('quick.db')
 
 exports.run = async (client, message, member) => {
   
-if(!message.member.roles.cache.some(r => ['797761256345174017'].includes(r.id)) && (!message.member.hasPermission("ADMINISTRATOR")))return message.reply("Bu Komutu Kullanmak İçin Yetkiniz Bulunmamakta.")  
+if(!message.member.roles.cache.some(r => ['798257016291459083'].includes(r.id)) && (!message.member.hasPermission("ADMINISTRATOR")))return message.reply("Bu Komutu Kullanmak İçin Yetkiniz Bulunmamakta.")  
 
   let uye = message.mentions.users.first() || message.author;
 let bilgi = db.get(`yetkili.${uye.id}.toplam`);

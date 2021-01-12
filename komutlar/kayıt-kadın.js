@@ -5,11 +5,11 @@ exports.run = async (client, message, args) => {
   
 if(!["798257016291459083"].some(role => message.member.roles.cache.get(role)) && (!message.member.hasPermission("ADMINISTRATOR"))) return message.channel.send(`Bu Komutu Kullanabilmek İçin Yetkin Bulunmuyor.`)
   
-const kadin = message.guild.roles.cache.find(r => r.id === "798090414107525141")
-const xx = message.guild.roles.cache.find(r => r.id === "798090414925283330")
+const kadin = message.guild.roles.cache.find(r => r.id === "798257043906494515")
+const xx = message.guild.roles.cache.find(r => r.id === "798257042950193203")
 const kayıtsız = message.guild.roles.cache.find(r => r.id === "798257046914334731")
-const reglog = message.guild.channels.cache.find(c => c.id === "798090481980014614")
-const genelchat = message.guild.channels.cache.find(g => g.id === "798090500191944724")
+const reglog = message.guild.channels.cache.find(c => c.id === "798257160391360542")
+const genelchat = message.guild.channels.cache.find(g => g.id === "798257160391360542")
 
 const member = message.guild.member(message.mentions.members.first() || message.guild.members.cache.get(args[0]));
 if(!member) return message.channel.send(`Bir Kullanıcı Belirt.`)

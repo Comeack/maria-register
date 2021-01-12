@@ -127,7 +127,7 @@ client.on("guildMemberAdd", member => {
   const kurulus = new Date().getTime() - user.createdAt.getTime();
   const gecen = moment
     .duration(kurulus)
-    .format(`YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]`);
+    .format(`\`YY [Yıl,] MM [Ay,] DD [Gün,] HH [Saat,]\``);
 
   var kontrol;
   if (kurulus < 1296000000) kontrol = "";
@@ -136,13 +136,11 @@ client.on("guildMemberAdd", member => {
   kanal.send(
     "<a:Sonsuzluk_6:798148906441375754> **MAЯIΛ Sunucumuza** <@" +
       member +
-      "> **Hoş Geldin** \n\n<a:Sonsuzluk_6:798148906441375754> **Hesabın** "  +
-      gecen +
-      " **Önce Oluşturulmuş** " +
-      kontrol +
-      "\n\n<a:Sonsuzluk_6:798148906441375754> **Seninle beraber** " +
+      "> **Hoş Geldin** \n\n<a:Sonsuzluk_6:798148906441375754> **Hesabın** "  + gecen +
+      " **Önce Oluşturulmuş** " + kontrol +
+      "\n\n<a:Sonsuzluk_6:798148906441375754> **Seninle Beraber** " +
       member.guild.memberCount +
-      " **kişi olduk**\n\n<a:Sonsuzluk_6:798148906441375754> **Tagımızı alarak `र` Kayıt olabilirsin**\n\n<a:Sonsuzluk_6:798148906441375754> **Şuanda MAЯIΛ #TAGALIM alımdadır.**\n\n<a:Sonsuzluk_6:798148906441375754>  **Kayıt Ekibimiz** <@&798257016291459083> **Seninle İlgilenecektir.**"
+      " **Kişi Olduk**\n\n<a:Sonsuzluk_6:798148906441375754> **Tagımızı Alarak `र` Kayıt Olabilirsin**\n\n<a:Sonsuzluk_6:798148906441375754> **Şuanda MAЯIΛ #TAGALIM alımdadır.**\n\n<a:Sonsuzluk_6:798148906441375754>  **Kayıt Ekibimiz** <@&798257016291459083> **Seninle İlgilenecektir.**"
   );
 });
 

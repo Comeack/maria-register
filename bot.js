@@ -118,17 +118,14 @@ client.login(ayarlar.token);
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\
 
 client.on("guildMemberAdd", member => {
- const kanal = member.guild.channels.cache.find(
-    r => r.id === "798257138996609102"
-  
-);
+  const kanal = member.guild.channels.cache.find(
+    r => r.id === "798623371193483304"
+  );
 
   let user = client.users.cache.get(member.id);
   require("moment-duration-format");
   const kurulus = new Date().getTime() - user.createdAt.getTime();
-  const gecen = moment
-    .duration(kurulus)
-    .format(`YY [Yıl,] MM [Ay,] DD [Gün]`);
+  const gecen = moment.duration(kurulus).format(`YY [Yıl,] MM [Ay,] DD [Gün]`);
 
   var kontrol;
   if (kurulus < 1296000000) kontrol = "";
@@ -137,8 +134,10 @@ client.on("guildMemberAdd", member => {
   kanal.send(
     "<a:Sonsuzluk_6:798148906441375754> **MAЯIΛ Sunucumuza** <@" +
       member +
-      "> **Hoş Geldin** \n\n<a:Sonsuzluk_6:798148906441375754> **Hesabın** "  + gecen +
-      " **Önce Oluşturulmuş** " + kontrol +
+      "> **Hoş Geldin** \n\n<a:Sonsuzluk_6:798148906441375754> **Hesabın** " +
+      gecen +
+      " **Önce Oluşturulmuş** " +
+      kontrol +
       "\n\n<a:Sonsuzluk_6:798148906441375754> **Seninle Beraber** " +
       member.guild.memberCount +
       " **Kişi Olduk**\n\n<a:Sonsuzluk_6:798148906441375754> **Tagımızı Alarak `र` Kayıt Olabilirsin**\n\n<a:Sonsuzluk_6:798148906441375754> **Şuanda MAЯIΛ #TAGALIM alımdadır.**\n\n<a:Sonsuzluk_6:798148906441375754>  **Kayıt Ekibimiz** <@&798257016291459083> **Seninle İlgilenecektir.**"
@@ -149,7 +148,7 @@ client.on("guildMemberAdd", member => {
 
 //-----------------------OTO ROL VERME ----------------------\\
 client.on("guildMemberAdd", member => {
-  member.roles.add('798257046914334731'); // aq buğrası ikide bir dc patlıyor şuraya ıd girersin unregister
+  member.roles.add("798257046914334731"); // aq buğrası ikide bir dc patlıyor şuraya ıd girersin unregister
 });
 
 //-----------------------OTO ROL VERME ----------------------\\
@@ -187,12 +186,11 @@ client.on("guildMemberAdd", member => {
 //YASAKLI TAG
 
 client.on("guildMemberAdd", member => {
-
-if(member.user.username.includes("✰")){
-member.roles.add("798257050962493471")
-member.roles.remove("798257046914334731")
-member.send("Sunucumuzun Yasaklı Tagında Bulunuyorsunuz!")
-}
+  if (member.user.username.includes("✰")) {
+    member.roles.add("798257050962493471");
+    member.roles.remove("798257046914334731");
+    member.send("Sunucumuzun Yasaklı Tagında Bulunuyorsunuz!");
+  }
 });
 
 //-----------------------TAG-ROL----------------------\\

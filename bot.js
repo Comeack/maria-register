@@ -142,7 +142,7 @@ client.on("guildMemberAdd", member => {
       kontrol +
       "\n\n<a:Sonsuzluk_6:798148906441375754> **Seninle beraber** " +
       member.guild.memberCount +
-      " **kişi olduk**\n\n<a:Sonsuzluk_6:798148906441375754> **Tagımızı alarak ` र ` Kayıt olabilirsin**\n\n<a:Sonsuzluk_6:798148906441375754> **Şuanda MAЯIΛ #TAGALIM alımdadır.**\n\n<a:Sonsuzluk_6:798148906441375754>  **Kayit ekibimiz** <@&798090394562330636>  **seninle ilgilenecektir.**"
+      " **kişi olduk**\n\n<a:Sonsuzluk_6:798148906441375754> **Tagımızı alarak ` र ` Kayıt olabilirsin**\n\n<a:Sonsuzluk_6:798148906441375754> **Şuanda MAЯIΛ #TAGALIM alımdadır.**\n\n<a:Sonsuzluk_6:798148906441375754>  **Kayit ekibimiz** <@&798257016291459083>  **seninle ilgilenecektir.**"
   );
 });
 

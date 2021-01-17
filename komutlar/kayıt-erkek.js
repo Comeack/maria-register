@@ -78,5 +78,5 @@ savelog.send(new MessageEmbed()
 
 
 datab.push(`isim.${message.guild.id}`, {userID: member.id, isim: name, yas: age, role: erkekrol.id})}
-exports.conf = {enabled: true, guildOnly: true, aliases: ["erkek"], permLevel: 0}
+exports.conf = {enabled: true, guildOnly: true, aliases: ["erkek","e"], permLevel: 0}
 exports.help = {name: 'erkek', description: "Etiketlenen kişiyi erkek rolleriyle kayıt eder.", usage: '.erkek @etiket/id İsim Yaş'}

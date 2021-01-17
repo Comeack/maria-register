@@ -140,7 +140,7 @@ client.on("guildMemberAdd", member => {
     let user = client.users.cache.get(member.id);
     require("moment-duration-format");
       const kurulus = new Date().getTime() - user.createdAt.getTime();  
-     const gecen = moment.duration(kurulus).format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
+     const gecen = moment.duration(kurulus).format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]**`) 
     var kontrol;
   if (kurulus < 1296000000) kontrol = '**Hesap Durumu:** `Güvenilmez`'
   if (kurulus > 1296000000) kontrol = '**Hesap Durumu:** `Güvenilir`'
@@ -157,9 +157,9 @@ client.on("guildMemberAdd", member => {
  **Sunucumuzun kurallarını <#798257143236395019> kanalında belirtilmiştir.**
 
   **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**`)
-  .setImage(`https://media0.giphy.com/media/NKEt9elQ5cR68/200.gif`)
+  //.setImage(`https://media0.giphy.com/media/NKEt9elQ5cR68/200.gif`)
   kanal.send(embed)
-  kanal.send(`<@&${register}>`)
+  kanal.send(`<@&${register}> Kayıt olmayı bekleyen birisi var!`)
 });
 
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\

@@ -12,9 +12,9 @@ module.exports = client => {
   console.log(
     `[${moment().format("YYYY-MM-DD HH:mm:ss")}] BOT: ${
       client.user.username
-    } ismi ile giriş yapıldı!`
+    } maria siker`
   );
   client.user.setStatus("online");
   client.user.setActivity("MAЯIΛ REGİSTER", { type: "WATCHING" }); //// TYPE - WATCHING , PLAYING , LISTENING gibi değiştirilebilir.
-  console.log(``);
+  console.log(`MARİA BOT AKTİF`);
 };

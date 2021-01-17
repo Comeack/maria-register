@@ -148,6 +148,7 @@ client.on("guildMemberAdd", member => {
   const embed = new Discord.MessageEmbed()
   .setAuthor(member.guild.name, member.guild.iconURL({dynamic:true}))
  .setColor("#2e042c")
+ .setThumbnail("")
  .setDescription(`
 <a:kelebek_1:799698967381671966> <@`+member.id+`> **Sunucumuza Hoşgeldin**
   
@@ -158,7 +159,7 @@ client.on("guildMemberAdd", member => {
 <a:kelebek_1:799698967381671966> **Sunucumuzun kurallarını <#798257143236395019> kanalında belirtilmiştir.**
 
 <a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**`)
-  .setImage(`https://cdn.glitch.com/d55080d2-71df-40d9-abb8-a49e6f817002%2Fezgif.com-gif-maker%20(4).gif?v=1610875576809`)
+  .setImage(`https://cdn.glitch.com/d55080d2-71df-40d9-abb8-a49e6f817002%2Fezgif.com-gif-maker%20(5).gif?v=1610878088313`)
   kanal.send(embed)
   kanal.send(`<@&${register}>`)
 });

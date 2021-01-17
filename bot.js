@@ -148,7 +148,7 @@ client.on("guildMemberAdd", member => {
   const embed = new Discord.MessageEmbed()
   .setAuthor(member.guild.name, member.guild.iconURL({dynamic:true}))
  .setColor("#2e042c")
- .setThumbnail("")
+ 
  .setDescription(`
 <a:kelebek_1:799698967381671966> <@`+member.id+`> **Sunucumuza Hoşgeldin**
   

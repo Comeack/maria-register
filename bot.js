@@ -125,16 +125,16 @@ client.on("guildMemberAdd", member => {
       if(üs) {
         üyesayısı = üyesayısı.replace(/([0-9])/g, d => {
           return {
-            '0': ``,
-            '1': ``,
-            '2': ``,
-            '3': ``,
-            '4': ``,
-            '5': ``,
-            '6': ``,
-            '7': ``,
-            '8': ``,
-            '9': ``}[d];})}
+            '0': `<a:10:800300887175593994>`,
+            '1': `<a:11:800300885628289054>`,
+            '2': `<a:12:800300994830532618>`,
+            '3': `<a:13:800300994839314478>`,
+            '4': `<a:14:800300886857482272>`,
+            '5': `<a:15:800300885388427305>`,
+            '6': `<a:16:800300994093252629>`,
+            '7': `<a:17:800300994550300702>`,
+            '8': `<a:18:800300887494492160>`,
+            '9': `<a:19:800300886937042945>`}[d];})}
       const kanal = member.guild.channels.cache.find(r => r.id === "798623371193483304");
       let register = '798257016291459083'
     let user = client.users.cache.get(member.id);
@@ -142,12 +142,12 @@ client.on("guildMemberAdd", member => {
       const kurulus = new Date().getTime() - user.createdAt.getTime();  
      const gecen = moment.duration(kurulus).format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]**`) 
     var kontrol;
-  if (kurulus < 1296000000) kontrol = '**Hesap Durumu:** `Güvenilmez`'
-  if (kurulus > 1296000000) kontrol = '**Hesap Durumu:** `Güvenilir`'
+  if (kurulus < 1296000000) kontrol = '**Hesap Durumu:** `Güvenilmez` <a:carpi:800296605487726602>'
+  if (kurulus > 1296000000) kontrol = '**Hesap Durumu:** `Güvenilir` <a:tik:800296547844620288>'
     moment.locale("tr");
   const embed = new Discord.MessageEmbed()
   .setAuthor(member.guild.name, member.guild.iconURL({dynamic:true}))
- .setColor("BLACK")
+ .setColor("#2e042c")
  .setDescription(`
 <a:kelebek_1:799698967381671966> <@`+member.id+`> **Sunucumuza Hoşgeldin**
   
@@ -160,7 +160,7 @@ client.on("guildMemberAdd", member => {
 <a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**`)
   .setImage(`https://cdn.glitch.com/d55080d2-71df-40d9-abb8-a49e6f817002%2Fezgif.com-gif-maker%20(4).gif?v=1610875576809`)
   kanal.send(embed)
-  kanal.send(`<@&${register}> Kayıt olmayı bekleyen birisi var!`)
+  kanal.send(`<@&${register}>`)
 });
 
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\

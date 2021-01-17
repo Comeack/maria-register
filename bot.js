@@ -147,16 +147,17 @@ client.on("guildMemberAdd", member => {
     moment.locale("tr");
   const embed = new Discord.MessageEmbed()
   .setAuthor(member.guild.name, member.guild.iconURL({dynamic:true}))
-  .setDescription(`
-  <@`+member.id+`> **Sunucumuza Hoşgeldin**
+ .setColor("BLACK")
+ .setDescription(`
+<a:kelebek_1:799698967381671966> <@`+member.id+`> **Sunucumuza Hoşgeldin**
   
-  **Kayıt olmak için Confirmation odasında** <@&{register}> **yetkililerine ses teyit vermen yeterlidir**
+<a:kelebek_1:799698967381671966> **Kayıt olmak için Confirmation odasında** <@&798257016291459083> **yetkililerine ses teyit vermen yeterlidir**
   
-  **Seninle beraber** `+üyesayısı+` **bukadar kişiyiz.**
+<a:kelebek_1:799698967381671966> **Seninle beraber** `+üyesayısı+` **bukadar kişiyiz.**
   
- **Sunucumuzun kurallarını <#798257143236395019> kanalında belirtilmiştir.**
+<a:kelebek_1:799698967381671966> **Sunucumuzun kurallarını <#798257143236395019> kanalında belirtilmiştir.**
 
-  **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**`)
+<a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**`)
   //.setImage(`https://media0.giphy.com/media/NKEt9elQ5cR68/200.gif`)
   kanal.send(embed)
   kanal.send(`<@&${register}> Kayıt olmayı bekleyen birisi var!`)

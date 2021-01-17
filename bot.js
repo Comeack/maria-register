@@ -158,7 +158,7 @@ client.on("guildMemberAdd", member => {
 <a:kelebek_1:799698967381671966> **Sunucumuzun kurallarını <#798257143236395019> kanalında belirtilmiştir.**
 
 <a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**`)
-  //.setImage(`https://media0.giphy.com/media/NKEt9elQ5cR68/200.gif`)
+  .setImage(`https://cdn.glitch.com/d55080d2-71df-40d9-abb8-a49e6f817002%2Fezgif.com-gif-maker%20(4).gif?v=1610875576809`)
   kanal.send(embed)
   kanal.send(`<@&${register}> Kayıt olmayı bekleyen birisi var!`)
 });

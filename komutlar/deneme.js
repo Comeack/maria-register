@@ -23,34 +23,34 @@ const savelog = message.guild.channels.cache.find(c => c.id === '800310637922091
 const member = message.guild.member(message.mentions.members.first() || message.guild.members.cache.get(args[0]));
 if(!member) return message.channel.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))
-.setDescription(`${message.author} bir kullanıcı belirt.`)
-.setColor('#a22a2a')).then(x => x.delete({timeout: 5000}));
+.setDescription(`${message.author} **bir kullanıcı belirt.**`)
+.setColor('#2e042c')).then(x => x.delete({timeout: 5000}));
 let name = args[1]
 let age = Number(args[2])
 if(!name) return message.channel.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))
-.setDescription(`Bir isim belirtmelisin.`)
-.setColor('#a22a2a')).then(x => x.delete({timeout: 5000}));
+.setDescription(`\`Bir isim belirtmelisin.\``)
+.setColor('#2e042c')).then(x => x.delete({timeout: 5000}));
 if(!age) return message.channel.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))
-.setDescription(`Bir yaş belirtmelisin.`)
-.setColor('#a22a2a')).then(x => x.delete({timeout: 5000}));
+.setDescription(`\`Bir yaş belirtmelisin.\``)
+.setColor('#2e042c')).then(x => x.delete({timeout: 5000}));
 if(member.id === message.author.id) return message.channel.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))
-.setDescription(`Kendini kayıt edemezsin.`)
-.setColor('#a22a2a')).then(x => x.delete({timeout: 5000}));
+.setDescription(`\`Kendini kayıt edemezsin.\``)
+.setColor('#2e042c')).then(x => x.delete({timeout: 5000}));
 if(member.id === client.user.id) return message.channel.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))
-.setDescription(`Bot kayıt edemezsin.`)
-.setColor('#a22a2a')).then(x => x.delete({timeout: 5000}));
+.setDescription(`\`Bot kayıt edemezsin.\``)
+.setColor('#2e042c')).then(x => x.delete({timeout: 5000}));
 if(member.id === message.guild.OwnerID) return message.channel.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))
-.setDescription(`Sunucu sahibini kayıt edemezsin.`)
-.setColor('#a22a2a')).then(x => x.delete({timeout: 5000}));
+.setDescription(`\`Sunucu sahibini kayıt edemezsin.\``)
+.setColor('#2e042c')).then(x => x.delete({timeout: 5000}));
 if(member.roles.highest.position >= message.member.roles.highest.position) return message.channel.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))
-.setDescription(`Belirtilen kullanıcı sizden üst/aynı pozisyonda işleme devam edilemiyor.`)
-.setColor('#a22a2a')).then(x => x.delete({timeout: 5000}));
+.setDescription(`\`Belirtilen kullanıcı sizden üst/aynı pozisyonda işleme devam edilemiyor.\``)
+.setColor('#2e042c')).then(x => x.delete({timeout: 5000}));
   
   
 datab.add(`yetkili.${message.author.id}.kadin`, 1)
@@ -65,17 +65,16 @@ member.roles.remove(kayıtsız)
 
 message.channel.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))
-.setDescription(`${member} üyesini ${message.author} kayıt etti. \n\n ${erkekrol}, ${xy} Rolleri Verildi. \n \`${tag} ${name} | ${age}\` Olarak ismi güncellendi.`)
+.setDescription(`${member} **Üyesini** ${message.author} **Teyit Etti.** \n\n ${erkekrol}, ${xy} **Rolleri Verildi.** \n \`${tag} ${name} | ${age}\` **Olarak ismi güncellendi.**`)
 .setFooter(`Toplam kayıtların: ${alldata}`)               
-.setColor('#65d8c4'))
+.setColor('#2e042c'))
   
-genelchat.send(`${member} Aramıza katıldı, hoşgeldin umarım keyifli vakit geçirirsin. 
-Sunucumuzun **${tag}** tagını alarak ailemizin parçası olabilirsin.`)
+genelchat.send(`<@${member.id}> **Aramıza Hoş Geldin.** <a:kalp_1:798150464754548746>`)
   
 savelog.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
 .setDescription(`• Yetkili: ${message.author} | \`${message.author.id}\`\n• Kullanıcı: ${member} | \`${member.id}\`\n• Güncel İsim: \`${tag} ${name} | ${age}\`\n• Roller: ${erkekrol}, ${xy} \n• Kanal: <#${message.channel.id}> | \`${message.channel.id}\`\n• Kayıtlar: \`${alldata}\` `)
-.setColor('#65d8c4'))
+.setColor('#2e042c'))
 
 
 datab.push(`isim.${message.guild.id}`, {userID: member.id, isim: name, yas: age, role: erkekrol.id})}

@@ -6,7 +6,7 @@ const { parseZone } = require("moment");
 
 exports.run = async (client, message, args) => {
   if (
-    !["788898307320840242"].some(role =>
+    !["798257016291459083"].some(role =>
       message.member.roles.cache.get(role)
     ) &&
     !message.member.hasPermission("ADMINISTRATOR")

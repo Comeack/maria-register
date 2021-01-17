@@ -118,30 +118,50 @@ client.login(ayarlar.token);
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\
 
 client.on("guildMemberAdd", member => {
-  const kanal = member.guild.channels.cache.find(
-    r => r.id === "798623371193483304"
-  );
+    require("moment-duration-format")
+      var üyesayısı = member.guild.members.cache.size.toString().replace(/ /g, "    ")
+      var üs = üyesayısı.match(/([0-9])/g)
+      üyesayısı = üyesayısı.replace(/([a-zA-Z])/g, "bilinmiyor").toLowerCase()
+      if(üs) {
+        üyesayısı = üyesayısı.replace(/([0-9])/g, d => {
+          return {
+            '0': ``,
+            '1': ``,
+            '2': ``,
+            '3': ``,
+            '4': ``,
+            '5': ``,
+            '6': ``,
+            '7': ``,
+            '8': ``,
+            '9': ``}[d];})}
+      const kanal = member.guild.channels.cache.find(r => r.id === "KANAL ID");
+      let register = 'REGİSTER ROL ID'
+    let user = client.users.cache.get(member.id);
+    require("moment-duration-format");
+      const kurulus = new Date().getTime() - user.createdAt.getTime();  
+     const gecen = moment.duration(kurulus).format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
+    var kontrol;
+  if (kurulus < 1296000000) kontrol = 'Hesap Durumu: Güvenilir Değil.'
+  if (kurulus > 1296000000) kontrol = 'Hesap Durumu: Güvenilir Gözüküyor.'
+    moment.locale("tr");
+  const embed = new Discord.MessageEmbed()
+  .setAuthor(member.guild.name, member.guild.iconURL({dynamic:true}))
+  .setDescription(`
+  <@`+member.id+`> Sunucumuza Katıldı ! 
+  
+  Kayıt edilmek için teyit odasında <@&{register}> yetkililerine teyit vermen yeterli !
+  
+  Seninle birlikte `+üyesayısı+` kişiye ulaştık !
+  
+  Sunucumuzun kurallarına uymayı unutma, kurallarımızı okumanı tavsiye ederiz.
 
-  let user = client.users.cache.get(member.id);
-  require("moment-duration-format");
-  const kurulus = new Date().getTime() - user.createdAt.getTime();
-  const gecen = moment.duration(kurulus).format(`YY [Yıl,] MM [Ay,] DD [Gün]`);
+  **MAЯIΛ sunucumuzun tagını  (\`tagınız\`) alarak bizlere destek olabilirsin.**
 
-  var kontrol;
-  if (kurulus < 1296000000) kontrol = "";
-  if (kurulus > 1296000000) kontrol = "";
-  moment.locale("tr");
-  kanal.send(
-    "<a:Sonsuzluk_6:798148906441375754> **MAЯIΛ Sunucumuza** <@" +
-      member +
-      "> **Hoş Geldin** \n\n<a:Sonsuzluk_6:798148906441375754> **Hesabın** " +
-      gecen +
-      " **Önce Oluşturulmuş** " +
-      kontrol +
-      "\n\n<a:Sonsuzluk_6:798148906441375754> **Seninle Beraber** " +
-      member.guild.memberCount +
-      " **Kişi Olduk**\n\n<a:Sonsuzluk_6:798148906441375754> **Tagımızı Alarak `र` Kayıt Olabilirsin**\n\n<a:Sonsuzluk_6:798148906441375754> **Şuanda MAЯIΛ #TAGALIM alımdadır.**\n\n<a:Sonsuzluk_6:798148906441375754>  **Kayıt Ekibimiz** <@&798257016291459083> **Seninle İlgilenecektir.**"
-  );
+  İçeride keyifli vakitler geçirmeni dileriz.`)
+  .setImage(`https://media0.giphy.com/media/NKEt9elQ5cR68/200.gif`)
+  kanal.send(embed)
+  kanal.send(`<@&${register}>`)
 });
 
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\

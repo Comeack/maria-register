@@ -142,13 +142,13 @@ client.on("guildMemberAdd", member => {
       const kurulus = new Date().getTime() - user.createdAt.getTime();  
      const gecen = moment.duration(kurulus).format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
     var kontrol;
-  if (kurulus < 1296000000) kontrol = 'Hesap Durumu: Güvenilir Değil.'
-  if (kurulus > 1296000000) kontrol = 'Hesap Durumu: Güvenilir Gözüküyor.'
+  if (kurulus < 1296000000) kontrol = '**Hesap Durumu:** `Güvenilmez`'
+  if (kurulus > 1296000000) kontrol = '**Hesap Durumu:** `Güvenilir`'
     moment.locale("tr");
   const embed = new Discord.MessageEmbed()
   .setAuthor(member.guild.name, member.guild.iconURL({dynamic:true}))
   .setDescription(`
-  <@`+member.id+`> Sunucumuza Katıldı ! 
+  <@`+member.id+`> **Sunucumuza Hoşgeldin**
   
   **Kayıt olmak için Confirmation odasında** <@&{register}> **yetkililerine ses teyit vermen yeterlidir**
   
@@ -156,9 +156,7 @@ client.on("guildMemberAdd", member => {
   
  **Sunucumuzun kurallarını <#798257143236395019> kanalında belirtilmiştir.**
 
-  **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**
-
-  İçeride keyifli vakitler geçirmeni dileriz.`)
+  **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**`)
   .setImage(`https://media0.giphy.com/media/NKEt9elQ5cR68/200.gif`)
   kanal.send(embed)
   kanal.send(`<@&${register}>`)

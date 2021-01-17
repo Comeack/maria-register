@@ -135,8 +135,8 @@ client.on("guildMemberAdd", member => {
             '7': ``,
             '8': ``,
             '9': ``}[d];})}
-      const kanal = member.guild.channels.cache.find(r => r.id === "KANAL ID");
-      let register = 'REGİSTER ROL ID'
+      const kanal = member.guild.channels.cache.find(r => r.id === "798623371193483304");
+      let register = '798257016291459083'
     let user = client.users.cache.get(member.id);
     require("moment-duration-format");
       const kurulus = new Date().getTime() - user.createdAt.getTime();  
@@ -150,13 +150,13 @@ client.on("guildMemberAdd", member => {
   .setDescription(`
   <@`+member.id+`> Sunucumuza Katıldı ! 
   
-  Kayıt edilmek için teyit odasında <@&{register}> yetkililerine teyit vermen yeterli !
+  **Kayıt olmak için Confirmation odasında** <@&{register}> **yetkililerine ses teyit vermen yeterlidir**
   
-  Seninle birlikte `+üyesayısı+` kişiye ulaştık !
+  **Seninle beraber** `+üyesayısı+` **bukadar kişiyiz.**
   
-  Sunucumuzun kurallarına uymayı unutma, kurallarımızı okumanı tavsiye ederiz.
+ **Sunucumuzun kurallarını <#798257143236395019> kanalında belirtilmiştir.**
 
-  **MAЯIΛ sunucumuzun tagını  (\`tagınız\`) alarak bizlere destek olabilirsin.**
+  **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**
 
   İçeride keyifli vakitler geçirmeni dileriz.`)
   .setImage(`https://media0.giphy.com/media/NKEt9elQ5cR68/200.gif`)

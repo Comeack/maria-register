@@ -118,50 +118,69 @@ client.login(ayarlar.token);
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\
 
 client.on("guildMemberAdd", member => {
-    require("moment-duration-format")
-      var üyesayısı = member.guild.members.cache.size.toString().replace(/ /g, "    ")
-      var üs = üyesayısı.match(/([0-9])/g)
-      üyesayısı = üyesayısı.replace(/([a-zA-Z])/g, "bilinmiyor").toLowerCase()
-      if(üs) {
-        üyesayısı = üyesayısı.replace(/([0-9])/g, d => {
-          return {
-            '0': `<a:10:800300887175593994>`,
-            '1': `<a:11:800300885628289054>`,
-            '2': `<a:12:800300994830532618>`,
-            '3': `<a:13:800300994839314478>`,
-            '4': `<a:14:800300886857482272>`,
-            '5': `<a:15:800300885388427305>`,
-            '6': `<a:16:800300994093252629>`,
-            '7': `<a:17:800300994550300702>`,
-            '8': `<a:18:800300887494492160>`,
-            '9': `<a:19:800300886937042945>`}[d];})}
-      const kanal = member.guild.channels.cache.find(r => r.id === "798623371193483304");
-      let register = '798257016291459083'
-    let user = client.users.cache.get(member.id);
-    require("moment-duration-format");
-      const kurulus = new Date().getTime() - user.createdAt.getTime();  
-     const gecen = moment.duration(kurulus).format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]**`) 
-    var kontrol;
-  if (kurulus < 1296000000) kontrol = '**Hesap Durumu:** `Güvenilmez` <a:carpi:800296605487726602>'
-  if (kurulus > 1296000000) kontrol = '**Hesap Durumu:** `Güvenilir` <a:tik:800296547844620288>'
-    moment.locale("tr");
+  require("moment-duration-format");
+  var üyesayısı = member.guild.members.cache.size
+    .toString()
+    .replace(/ /g, "    ");
+  var üs = üyesayısı.match(/([0-9])/g);
+  üyesayısı = üyesayısı.replace(/([a-zA-Z])/g, "bilinmiyor").toLowerCase();
+  if (üs) {
+    üyesayısı = üyesayısı.replace(/([0-9])/g, d => {
+      return {
+        "0": `<a:10:800300887175593994>`,
+        "1": `<a:11:800300885628289054>`,
+        "2": `<a:12:800300994830532618>`,
+        "3": `<a:13:800300994839314478>`,
+        "4": `<a:14:800300886857482272>`,
+        "5": `<a:15:800300885388427305>`,
+        "6": `<a:16:800300994093252629>`,
+        "7": `<a:17:800300994550300702>`,
+        "8": `<a:18:800300887494492160>`,
+        "9": `<a:19:800300886937042945>`
+      }[d];
+    });
+  }
+  const kanal = member.guild.channels.cache.find(
+    r => r.id === "798623371193483304"
+  );
+  let register = "798257016291459083";
+  let user = client.users.cache.get(member.id);
+  require("moment-duration-format");
+  const kurulus = new Date().getTime() - user.createdAt.getTime();
+  const gecen = moment
+    .duration(kurulus)
+    .format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]**`);
+  var kontrol;
+  if (kurulus < 1296000000)
+    kontrol = "**Hesap Durumu:** `Güvenilmez` <a:carpi:800296605487726602>";
+  if (kurulus > 1296000000)
+    kontrol = "**Hesap Durumu:** `Güvenilir` <a:tik:800296547844620288>";
+  moment.locale("tr");
   const embed = new Discord.MessageEmbed()
-  .setAuthor(member.guild.name, member.guild.iconURL({dynamic:true}))
- .setColor("#2e042c")
- 
- .setDescription(`
-<a:kelebek_1:799698967381671966> <@`+member.id+`> **Sunucumuza Hoşgeldin**
+    .setAuthor(member.guild.name, member.guild.iconURL({ dynamic: true }))
+    .setColor("#2e042c")
+
+    .setDescription(
+      `
+<a:kelebek_1:799698967381671966> <@` +
+        member.id +
+        `> **Sunucumuza Hoşgeldin**
   
 <a:kelebek_1:799698967381671966> **Kayıt olmak için Confirmation odasında** <@&798257016291459083> **yetkililerine ses teyit vermen yeterlidir**
   
-<a:kelebek_1:799698967381671966> **Seninle beraber** `+üyesayısı+` **bukadar kişiyiz.**
+<a:kelebek_1:799698967381671966> **Seninle beraber** ` +
+        üyesayısı +
+        ` **bukadar kişiyiz.**
   
 <a:kelebek_1:799698967381671966> **Sunucumuzun kurallarını <#798257143236395019> kanalında belirtilmiştir.**
 
-<a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**`)
-  .setImage(`https://cdn.glitch.com/d55080d2-71df-40d9-abb8-a49e6f817002%2Fezgif.com-gif-maker%20(5).gif?v=1610878088313`)
-  kanal.send(embed)
-  kanal.send(`<@&${register}>`)
+<a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**`
+    )
+    .setImage(
+      `https://cdn.glitch.com/d55080d2-71df-40d9-abb8-a49e6f817002%2Fezgif.com-gif-maker%20(5).gif?v=1610878088313`
+    );
+  kanal.send(embed);
+  kanal.send(`<@&${register}>`);
 });
 
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\
@@ -303,3 +322,6 @@ client.on("ready", async function() {
     });
 });
 
+client.on("guildMemberAdd", member => {
+  member.setNickname("र İsim | Yaş"); ////YENI GELENLERE VERILCEK ISIM
+});

@@ -152,9 +152,9 @@ client.on("guildMemberAdd", member => {
     .format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]**`);
   var kontrol;
   if (kurulus < 1296000000)
-    kontrol = "**Hesap Durumu:** `Güvenilmez` <a:carpi:800296605487726602>";
+    kontrol = "**Hesap Durumu:** \`Güvenilmez\` <a:carpi:800296605487726602>";
   if (kurulus > 1296000000)
-    kontrol = "**Hesap Durumu:** `Güvenilir` <a:tik:800296547844620288>";
+    kontrol = "**Hesap Durumu:** \`Güvenilir\` <a:tik:800296547844620288>";
   moment.locale("tr");
   const embed = new Discord.MessageEmbed()
     .setAuthor(member.guild.name, member.guild.iconURL({ dynamic: true }))

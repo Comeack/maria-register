@@ -21,7 +21,7 @@ message.channel.send(new dc.MessageEmbed().setAuthor(yazı, message.guild.iconUR
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ["topteyit", "top", "teyit", "top-teyit"],
+    aliases: ["topteyit", "top", "teyit", "top-teyit","stats","stat"],
     permLevel: 0
 };
 

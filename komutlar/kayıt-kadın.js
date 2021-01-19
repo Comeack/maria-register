@@ -132,6 +132,10 @@ exports.run = async (client, message, args) => {
   member.roles.add(kadınrol);
   member.roles.add(kadınrol2);
   member.roles.remove(kayıtsız);
+  member.setNickname(`${tag} ${name} | ${age}`);
+  member.roles.add(kadınrol);
+  member.roles.add(kadınrol2);
+  member.roles.remove(kayıtsız);
 
   message.channel.send(
     new MessageEmbed()

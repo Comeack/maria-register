@@ -177,7 +177,7 @@ client.on("guildMemberAdd", member => {
 <a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**`
     )
     .setImage(
-      `https://cdn.glitch.com/d55080d2-71df-40d9-abb8-a49e6f817002%2Fezgif.com-gif-maker%20(5).gif?v=1610878088313`
+      `https://cdn.glitch.com/d55080d2-71df-40d9-abb8-a49e6f817002%2Fezgif.com-gif-maker.gif?v=1611042618708`
     );
   kanal.send(embed);
   kanal.send(`<@&${register}>`);

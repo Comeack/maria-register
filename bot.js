@@ -162,16 +162,14 @@ client.on("guildMemberAdd", member => {
 
     .setDescription(
       `
-<a:kelebek_1:799698967381671966> <@` +
-        member.id +
-        `> **Sunucumuza Hoşgeldin**
+<a:kelebek_1:799698967381671966> <@` +  member.id + `> **Sunucumuza Hoşgeldin**
   
 <a:kelebek_1:799698967381671966> **Kayıt olmak için Confirmation odasında** <@&798257016291459083> **yetkililerine ses teyit vermen yeterlidir**
   
-<a:kelebek_1:799698967381671966> **Seninle beraber** ` +
-        üyesayısı +
-        ` **bukadar kişiyiz.**
+<a:kelebek_1:799698967381671966> **Seninle beraber** ` +    üyesayısı + ` **bukadar kişiyiz.**
   
+<a:kelebek_1:799698967381671966> **Hesabınını oluşturma tarihi** ` + kurulus +  `
+
 <a:kelebek_1:799698967381671966> **Sunucumuzun kurallarını <#798257143236395019> kanalında belirtilmiştir.**
 
 <a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**`

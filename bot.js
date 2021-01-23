@@ -149,7 +149,7 @@ client.on("guildMemberAdd", member => {
   const kurulus = new Date().getTime() - user.createdAt.getTime();
   const gecen = moment
     .duration(kurulus)
-    .format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]**`);
+    .format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
   var kontrol;
   if (kurulus < 1296000000)
     kontrol = "**Hesap Durumu:** \`Güvenilmez\` <a:carpi:800296605487726602>";
@@ -168,7 +168,7 @@ client.on("guildMemberAdd", member => {
   
 <a:kelebek_1:799698967381671966> **Seninle beraber** ` +    üyesayısı + ` **bukadar kişiyiz.**
   
-<a:kelebek_1:799698967381671966> **Hesabınını oluşturma tarihi** ` + kurulus +  `
+<a:kelebek_1:799698967381671966> **Hesabınını oluşturma tarihi** ` + kurulus +  ` ` + kontrol + `
 
 <a:kelebek_1:799698967381671966> **Sunucumuzun kurallarını <#798257143236395019> kanalında belirtilmiştir.**
 

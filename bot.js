@@ -168,7 +168,7 @@ client.on("guildMemberAdd", member => {
   
 <a:kelebek_1:799698967381671966> **Seninle beraber** ` +    üyesayısı + ` **bukadar kişiyiz.**
   
-<a:kelebek_1:799698967381671966> **Hesabınını oluşturma tarihi** ` + kurulus +  ` ` + kontrol + `
+<a:kelebek_1:799698967381671966>  `+ kontrol + `
 
 <a:kelebek_1:799698967381671966> **Sunucumuzun kurallarını <#798257143236395019> kanalında belirtilmiştir.**
 

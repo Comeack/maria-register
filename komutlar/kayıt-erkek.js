@@ -16,7 +16,7 @@ const tag = 'र'
 const erkekrol = message.guild.roles.cache.find(r => r.id === '798257045442527272') 
 const erkekrol2 = message.guild.roles.cache.find(r => r.id === '798257044301152257')
 const kayıtsız = message.guild.roles.cache.find(r => r.id === '798257046914334731')
-const genelchat = message.guild.channels.cache.find(c => c.id === '798257160391360542')
+const genelchat = message.guild.channels.cache.find(c => c.id === '804746434829353022')
 const savelog = message.guild.channels.cache.find(c => c.id === '800310637922091048')
 
 

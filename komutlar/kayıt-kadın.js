@@ -29,7 +29,7 @@ exports.run = async (client, message, args) => {
   const kadınrol = message.guild.roles.cache.find(r => r.id === "798257043906494515");
   const kadınrol2 = message.guild.roles.cache.find(r => r.id === "798257042950193203");
   const kayıtsız = message.guild.roles.cache.find(r => r.id === "798257046914334731");
-  const genelchat = message.guild.channels.cache.find(c => c.id === "798257160391360542");
+  const genelchat = message.guild.channels.cache.find(c => c.id === "804746434829353022");
   const savelog = message.guild.channels.cache.find(c => c.id === "800310637922091048");
 
   const member = message.guild.member(

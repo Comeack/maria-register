@@ -14,6 +14,16 @@ const snekfetch = require("snekfetch"); //
 const ms = require("ms"); //
 //
 
+
+
+client.config = {
+
+    mods: ['798257016291459083']
+  }
+
+
+
+
 var prefix = ayarlar.prefix; //
 //
 const log = message => {

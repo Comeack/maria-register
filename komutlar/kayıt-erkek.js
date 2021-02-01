@@ -82,5 +82,5 @@ savelog.send(new MessageEmbed()
 //atab.push(`isimler_${member.id}`, ` \`${name} | ${age}\` (<@&798257045442527272>)`);
 //atab.push(`isim.${message.guild.id}`, {userID: member.id, isim: name, yas: age, role: eerkekrol.id)}
 
-datab.push(`isim.${message.guild.id}`, {userID: member.id, isim: name, yas: age, role: "<@&798257045442527272>"})};exports.conf = {enabled: true, guildOnly: true, aliases: ["erkek","e"], permLevel: 0}
+datab.push(`isim.${message.guild.id}`, {userID: member.id, isim: name, yas: age, role: "<@&798257045442527272>, <@&798257044301152257>"})};exports.conf = {enabled: true, guildOnly: true, aliases: ["erkek","e"], permLevel: 0}
 exports.help = {name: 'erkek', description: "Etiketlenen kişiyi erkek rolleriyle kayıt eder.", usage: '.erkek @etiket/id İsim Yaş'}

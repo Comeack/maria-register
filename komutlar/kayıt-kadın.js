@@ -166,7 +166,7 @@ exports.run = async (client, message, args) => {
       .setColor("#2e042c")
   );
 //datab.push(`isimler_${member.id}`, ` \`${name} | ${age}\` (<@&798257043906494515>)`);
- datab.push(`isim.${message.guild.id}`, {userID: member.id, isim: name, yas: age, role: "<@&798257043906494515>"})}
+ datab.push(`isim.${message.guild.id}`, {userID: member.id, isim: name, yas: age, role: "<@&798257043906494515>, <@&798257042950193203>"})}
 exports.conf = {
   enabled: true,
   guildOnly: true,

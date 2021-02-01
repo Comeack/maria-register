@@ -55,7 +55,7 @@ member.setNickname(`${tag} ${name} | ${age}`)
 
 message.channel.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))
-.setDescription(`${member} **Üyesinin ismini değiştirdi** ${message.author} \n \n \`${tag} ${name} | ${age}\` **Olarak ismi güncellendi.**`)
+.setDescription(`${message.author}, ${member} **Üyesinin ismini değiştirdi** \n \n \`${tag} ${name} | ${age}\` **Olarak ismi güncellendi.**`)
 
 .setColor('#2e042c'))
   

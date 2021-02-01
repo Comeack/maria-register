@@ -79,7 +79,8 @@ savelog.send(new MessageEmbed()
 .setDescription(`<a:maria__tac:798886561428275211> **Yetkili:** ${message.author} | \`${message.author.id}\`\n<a:maria__tac:798886561428275211> **Kullanıcı:** ${member} | \`${member.id}\`\n<a:maria__tac:798886561428275211> **Güncel İsim:** \`${tag} ${name} | ${age}\`\n<a:maria__tac:798886561428275211> Roller: ${erkekrol}, ${erkekrol2} \n<a:maria__tac:798886561428275211> **Kanal:** <#${message.channel.id}> | \`${message.channel.id}\`\n<a:maria__tac:798886561428275211> **Kayıtlar:** \`${alldata}\` `)
 .setColor('#2e042c'))
 
-datab.push(`isimler_${member.id}`, ` \`${name} | ${age}\` (<@&798257045442527272>)`);
-datab.push(`isim.${message.guild.id}`, {userID: member.id, isim: name, yas: age, role: erkekrol.id})}
-exports.conf = {enabled: true, guildOnly: true, aliases: ["erkek","e"], permLevel: 0}
+d/atab.push(`isimler_${member.id}`, ` \`${name} | ${age}\` (<@&798257045442527272>)`);
+datab.push(`isim.${message.guild.id}`, {userID: member.id, isim: name, yas: age, role: eerkekrol.id)}
+
+datab.push(`isin.${message.guild.id}`, {userID: member.id,exports.conf = {enabled: true, guildOnly: true, aliases: ["erkek","e"], permLevel: 0}
 exports.help = {name: 'erkek', description: "Etiketlenen kişiyi erkek rolleriyle kayıt eder.", usage: '.erkek @etiket/id İsim Yaş'}

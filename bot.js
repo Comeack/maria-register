@@ -15,15 +15,6 @@ const ms = require("ms"); //
 //
 
 
-
-client.config = {
-
-    mods: ['798257016291459083']
-  }
-
-
-
-
 var prefix = ayarlar.prefix; //
 //
 const log = message => {
@@ -35,12 +26,11 @@ client.commands = new Discord.Collection(); //
 client.aliases = new Discord.Collection(); //
 fs.readdir("./komutlar/", (err, files) => {
   //
-  if (err) console.error(err); //
+  //if (err) console.error(err); //
   log(`${files.length} komut yüklenecek.`); //
-  files.forEach(f => {
-    //
-    let props = require(`./komutlar/${f}`); //
-    log(`Yüklenen komut: ${props.help.name}.`); //
+  files.forEach(file => {
+   let props = require(`./komutlar/${file}`); //
+    console.log(`Yüklenen komut: ${props.help.name}.`); //
     client.commands.set(props.help.name, props); //
     props.conf.aliases.forEach(alias => {
       //
@@ -48,26 +38,33 @@ fs.readdir("./komutlar/", (err, files) => {
     });
   });
 });
+client.commands = new Discord.Collection();
 
-client.reload = command => {
-  return new Promise((resolve, reject) => {
-    try {
-      delete require.cache[require.resolve(`./komutlar/${command}`)];
-      let cmd = require(`./komutlar/${command}`);
-      client.commands.delete(command);
-      client.aliases.forEach((cmd, alias) => {
-        if (cmd === command) client.aliases.delete(alias);
-      });
-      client.commands.set(command, cmd);
-      cmd.conf.aliases.forEach(alias => {
-        client.aliases.set(alias, cmd.help.name);
-      });
-      resolve();
-    } catch (e) {
-      reject(e);
-    }
-  });
-};
+client.aliases = new Discord.Collection();
+
+fs.readdir('./komutlar/', (err, files) => {
+
+    if (err) console.error(err);
+
+    console.log(`${files.length} komut yüklenecek.`);
+
+    files.forEach(f => {
+
+        let props = require(`./komutlar/${f}`);
+
+        console.log(`Yüklenen komut: ${props.help.name}.`);
+
+        client.commands.set(props.help.name, props);
+
+        props.conf.aliases.forEach(alias => {
+
+            client.aliases.set(alias, props.help.name);
+
+        });
+
+    });
+
+});
 
 client.load = command => {
   return new Promise((resolve, reject) => {

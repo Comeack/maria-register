@@ -3,7 +3,7 @@ const db = require('quick.db');
 const ayar = require('../ayarlar.json');
 module.exports.run = async (client, message, users, args) => {
 
-    if(!message.member.roles.cache.some(r => [""].includes(r.id)) && (!message.member.hasPermission("ADMINISTRATOR")))
+    if(!message.member.roles.cache.some(r => ["798257016291459083"].includes(r.id)) && (!message.member.hasPermission("ADMINISTRATOR")))
     return message.reply("Bu Komutu Kullanmak İçin Yetkiniz Bulunmamakta.")
     
 //------------------------------------------------KAYITLAR-----------------------------------------------\\  

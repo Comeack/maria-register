@@ -72,7 +72,10 @@ message.channel.send(new MessageEmbed()
 .setFooter(`Toplam kayıtların: ${alldata}`)               
 .setColor('#2e042c'))
   
-genelchat.send(`<@${member.id}> **Aramıza Hoş Geldin.** <a:kalp_1:798150464754548746>`)
+genelchat.send(new MessageEmbed()
+.setAuthor("MAЯIΛ #TAGALIM")
+.setDescription(`<@${member.id}> **Aramıza Hoş Geldin.** <a:kalp_1:798150464754548746>`)
+.setColor('#2e042c'))
   
 savelog.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))

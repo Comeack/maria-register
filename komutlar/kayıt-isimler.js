@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js")
 const db = require('quick.db');
 module.exports.run = async (client, message, users, args) => {
 
-if(!message.member.roles.cache.some(r => ['798158116469997600'].includes(r.id)) && (!message.member.hasPermission("ADMINISTRATOR")))
+if(!message.member.roles.cache.some(r => ['798257016291459083'].includes(r.id)) && (!message.member.hasPermission("ADMINISTRATOR")))
 return message.channel.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))
 .setDescription(`${message.author} bu komutu kullanmak için yetkin bulunmamakta.`)

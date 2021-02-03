@@ -150,9 +150,10 @@ exports.run = async (client, message, args) => {
       .setColor("#2e042c")
   );
 
-  genelchat.send(
-    `<@${member.id}> **Aramıza Hoş Geldin.** <a:kalp_1:798150464754548746>`
-  );
+ genelchat.send(new MessageEmbed()
+.setAuthor("MAЯIΛ #TAGALIM")
+.setDescription(`<@${member.id}> **Aramıza Hoş Geldin, <#798257143236395019> Kanalını Okumayı Unutma İyi Eğlenceler Dileriz.** <a:kalp_1:798150464754548746>`)
+.setColor('#2e042c'))
 
   savelog.send(
     new MessageEmbed()

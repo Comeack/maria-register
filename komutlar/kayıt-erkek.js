@@ -74,12 +74,12 @@ message.channel.send(new MessageEmbed()
   
 genelchat.send(new MessageEmbed()
 .setAuthor("MAЯIΛ #TAGALIM")
-.setDescription(`<@${member.id}> **Aramıza Hoş Geldin.** <a:kalp_1:798150464754548746>`)
+.setDescription(`<@${member.id}> **Aramıza Hoş Geldin, <#798257143236395019> Kanalını Okumayı Unutma İyi Eğlenceler Dileriz.** <a:kalp_1:798150464754548746>`)
 .setColor('#2e042c'))
   
 savelog.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-.setDescription(`<a:maria__tac:798886561428275211> **Yetkili:** ${message.author} | \`${message.author.id}\`\n<a:maria__tac:798886561428275211> **Kullanıcı:** ${member} | \`${member.id}\`\n<a:maria__tac:798886561428275211> **Güncel İsim:** \`${tag} ${name} | ${age}\`\n<a:maria__tac:798886561428275211> Roller: ${erkekrol}, ${erkekrol2} \n<a:maria__tac:798886561428275211> **Kanal:** <#${message.channel.id}> | \`${message.channel.id}\`\n<a:maria__tac:798886561428275211> **Kayıtlar:** \`${alldata}\` `)
+.setDescription(`<a:maria__tac:798886561428275211> **Yetkili:** ${message.author} | \`${message.author.id}\`\n<a:maria__tac:798886561428275211> **Kullanıcı:** ${member} | \`${member.id}\`\n<a:maria__tac:798886561428275211> **Güncel İsim:** \`${tag} ${name} | ${age}\`\n<a:maria__tac:798886561428275211> **Roller:** ${erkekrol}, ${erkekrol2} \n<a:maria__tac:798886561428275211> **Kanal:** <#${message.channel.id}> | \`${message.channel.id}\`\n<a:maria__tac:798886561428275211> **Kayıtlar:** \`${alldata}\` `)
 .setColor('#2e042c'))
 
 //atab.push(`isimler_${member.id}`, ` \`${name} | ${age}\` (<@&798257045442527272>)`);

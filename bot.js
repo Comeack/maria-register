@@ -170,9 +170,8 @@ client.on("guildMemberAdd", member => {
 
 <a:kelebek_1:799698967381671966> <@&798257016291459083> **Rolündeki yetkililerimiz sizinle ilgilenecektir.**
     
-<a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun şuanda taglı alımdadır** (\`र\`) **alarak kayıt olabilirsin.**`, {
-          file: "https://cdn.glitch.com/d55080d2-71df-40d9-abb8-a49e6f817002%2Fezgif.com-gif-maker.gif?v=1611042618708"
- )
+<a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun şuanda taglı alımdadır** (\`र\`) **alarak kayıt olabilirsin.**`, { file: `https://discord.gg/ammetv5cWg`})
+       //   file: "https://cdn.glitch.com/d55080d2-71df-40d9-abb8-a49e6f817002%2Fezgif.com-gif-maker.gif?v=1611042618708"
 
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\
 

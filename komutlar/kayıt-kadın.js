@@ -127,7 +127,11 @@ exports.run = async (client, message, args) => {
   datab.add(`yetkili.${message.author.id}.kadin`, 1);
   datab.add(`yetkili.${message.author.id}.toplam`, 1);
   let alldata = datab.fetch(`yetkili.${message.author.id}.toplam`);
-
+  
+  member.setNickname(`${tag} ${name} | ${age}`);
+  member.roles.add(kadınrol);
+  member.roles.add(kadınrol2);
+  member.roles.remove(kayıtsız);
   member.setNickname(`${tag} ${name} | ${age}`);
   member.roles.add(kadınrol);
   member.roles.add(kadınrol2);

@@ -170,7 +170,7 @@ client.on("guildMemberAdd", member => {
 
 <a:kelebek_1:799698967381671966> <@&798257016291459083> **Rolündeki yetkililerimiz sizinle ilgilenecektir.**
     
-<a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun şuanda taglı alımdadır** (`/TAG`/) **alarak kayıt olabilirsin.**`)
+<a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun şuanda taglı alımdadır** (\`र\`) **alarak kayıt olabilirsin.**`)
 
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\
 
@@ -178,7 +178,9 @@ client.on("guildMemberAdd", member => {
 client.on("guildMemberAdd", member => {
   member.roles.add("798257046914334731"); // aq buğrası ikide bir dc patlıyor şuraya ıd girersin unregister
 });
-  client.on("
+  client.on("guildMemberAdd", member => {
+    member.setNickname(`र İsim | Yaş`)
+    });
 
 //-----------------------OTO ROL VERME ----------------------\\
 
@@ -311,6 +313,4 @@ client.on("ready", async function() {
       throw err;
     });
 });
-
-client.on("guildMemberAdd", member => {
-  member.setNickname(`र İsim | Yaş`))};//YENI GELENLERE VERILCEK ISIM)}
+  });

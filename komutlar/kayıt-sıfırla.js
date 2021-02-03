@@ -21,18 +21,18 @@ if(!member.roles.highest.position >= message.member.roles.highest.position) mess
 .setColor('#2e042c')).then(x => x.delete({timeout: 5000}));
 
   
-let bilgi = db.get(`yetkili.${member.id}`);  
-db.delete(`yetkili.${message.author.id}.erkek`)
-db.delete(`yetkili.${message.author.id}.toplam`)  
-db.delete(`yetkili.${message.author.id}.kadin`)
-let toplami = db.fetch(`yetkili.${message.author.id}.toplam`)  
+let bilgi = db.get(`isim.${member.id}`);  
+db.delete(`isim.${message.author.id}`)
+db.delete(`isim.${message.author.id}`)  
+db.delete(`isim.${message.author.id}`)
+let toplami = db.fetch(`isim.${message.author.id}`)  
 
 message.react('✅')
 
 message.channel.send(new Discord.MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))
 .setColor("#2e042c")
-.setDescription(`${member} **Adlı Kullanıcının Kayıtları Silindi,** <@${message.author.id}> **Tarafından Sıfırlandı.**`))
+.setDescription(`${member} **Adlı Kullanıcının İsimleri Silindi,** <@${message.author.id}> **Tarafından Sıfırlandı.**`))
   
 
 }
@@ -40,11 +40,11 @@ message.channel.send(new Discord.MessageEmbed()
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ["sıfırla", "kayıt-sıfırla", "kayıtları-sıfırla", "db-sıfırla", "dbisil", "db-sil"],
+    aliases: ["i-sıfırla", "isim-sıfırla", "isimleri-sıfırla"],
     permLevel: 0
 };
 
 exports.help = {
-    name: "sıfırla"
+    name: "iisim-sıfırla"
 }
 

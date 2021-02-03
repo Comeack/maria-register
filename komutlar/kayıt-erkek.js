@@ -65,10 +65,7 @@ member.setNickname(`${tag} ${name} | ${age}`)
 member.roles.add(erkekrol)
 member.roles.add(erkekrol2)
 member.roles.remove(kayıtsız)
-member.setNickname(`${tag} ${name} | ${age}`)
-member.roles.add(erkekrol)
-member.roles.add(erkekrol2)
-member.roles.remove(kayıtsız)
+
 
 message.channel.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))

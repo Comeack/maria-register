@@ -219,7 +219,7 @@ client.on("guildMemberAdd", member => {
     member.roles.remove(kytsz);
 
     member.user.send(
-      "Selam Dostum Ne Yazık ki Sana Kötü Bir Haberim Var Hesabın 1 Hafta Gibi Kısa Bir Sürede Açıldığı İçin Fake Hesap Katagorisine Giriyorsun Lütfen Bir Yetkiliyle İletişime Geç Onlar Sana Yardımcı Olucaktır."
+      "**Fake hesap sistemine düştün.**\n **1 Hafta'dan önce açılmış hesaplar fake hesap sistemine düşmektedir.**\n **Bir üst yetkiliye başvurarak cezalı permni aldırabilirsin.**"
     );
     setTimeout(() => {}, 1000);
   } else {
@@ -230,10 +230,10 @@ client.on("guildMemberAdd", member => {
 //YASAKLI TAG
 
 client.on("guildMemberAdd", member => {
-  if (member.user.username.includes("✰")) {
+  if (member.user.username.includes("✰","")) {
     member.roles.add("798257050962493471");
     member.roles.remove("798257046914334731");
-    member.send("Sunucumuzun Yasaklı Tagında Bulunuyorsunuz!");
+    member.send("**Sunucumuzun Yasaklı Tagında Bulunuyorsunuz!**");
   }
 });
 

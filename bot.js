@@ -164,12 +164,8 @@ client.on("guildMemberAdd", member => {
     kontrol = "**Hesap Durumu:** \`Güvenilir\` <a:tik:800296547844620288>";
   moment.locale("tr");
   const embed = new Discord.MessageEmbed()
-    .setAuthor(member.guild.name, member.guild.iconURL({ dynamic: true }))
-    .setColor("#2e042c")
-
-    .setDescription(
-      `
-<a:kelebek_1:799698967381671966> <@` +  member.id + `> **Sunucumuza Hoşgeldin**
+    
+`<a:kelebek_1:799698967381671966> <@` +  member.id + `> **Sunucumuza Hoşgeldin**
   
 <a:kelebek_1:799698967381671966> **Kayıt olmak için Confirmation odasında** <@&798257016291459083> **yetkililerine ses teyit vermen yeterlidir**
   
@@ -179,14 +175,7 @@ client.on("guildMemberAdd", member => {
 
 <a:kelebek_1:799698967381671966> **Sunucumuzun kurallarını <#798257143236395019> kanalında belirtilmiştir.**
 
-<a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**`
-    )
-    .setImage(
-      `https://cdn.glitch.com/d55080d2-71df-40d9-abb8-a49e6f817002%2Fezgif.com-gif-maker.gif?v=1611042618708`
-    );
-  kanal.send(embed);
-  kanal.send(`<@&${register}>`);
-});
+<a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**`});
 
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\
 

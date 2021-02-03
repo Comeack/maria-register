@@ -22,9 +22,9 @@ if(!member.roles.highest.position >= message.member.roles.highest.position) mess
 
   
 let bilgi = db.get(`isim.${member.id}`);  
-db.delete(`isim.${message.author.id}`)
-db.delete(`isim.${message.author.id}`)  
-db.delete(`isim.${message.author.id}`)
+db.delete(`isim.${message.guild.id}`)
+db.delete(`isim.${message.guild.id}`)  
+db.delete(`isim.${message.guild.id}`)
 let toplami = db.fetch(`isim.${message.author.id}`)  
 
 message.react('✅')

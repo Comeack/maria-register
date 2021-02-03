@@ -15,18 +15,7 @@ let member = message.guild.member(mariauye)
 //-------------------------------------------------------------------------------------------------------\\
 
 
-member.roles.add("798257046914334731"); //kayıtsız permi
-
-//----------ERKEK PERMLERİ----------\\
-
-member.roles.add("798257045442527272"); //alınıcak perm
-member.roles.add("798257044301152257"); //alınıcak perm
-
-
- //----------KADIN PERMLERİ----------\\
-
-member.roles.add("798257043906494515"); //alınıcak perm
-member.roles.add("798257042950193203"); //alınıcak perm 
+member.roles.add("805509081430360125"); //vip permi
   
 
 //-------------------------------------------------------------------------------------------------------\\
@@ -35,10 +24,10 @@ member.roles.add("798257042950193203"); //alınıcak perm
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["kayıtsız"],
+  aliases: ["vip"],
   permLevel: 0
 }
 exports.help = {
-  name: "unregister",
-  description: "unregister"
+  name: "vip",
+  description: "vip"
 }

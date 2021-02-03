@@ -156,8 +156,8 @@ client.on("guildMemberAdd", member => {
       const kurulus = new Date().getTime() - user.createdAt.getTime();  
      const gecen = moment.duration(kurulus).format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
     var kontrol;
-  if (kurulus < 1296000000) kontrol = '\`Güvenilmez\` <a:carpi:800296605487726602>'
-  if (kurulus > 1296000000) kontrol = '\`Güvenilir\` <a:tik:800296547844620288>'
+  if (kurulus < 1296000000) kontrol = 'Güvenilmez <a:carpi:800296605487726602>'
+  if (kurulus > 1296000000) kontrol = 'Güvenilir <a:tik:800296547844620288>'
     moment.locale("tr");
  
  kanal.send(`<a:kelebek_1:799698967381671966> <@` +  member.id + `> **Sunucumuza Hoşgeldin.**
@@ -170,8 +170,8 @@ client.on("guildMemberAdd", member => {
 
 <a:kelebek_1:799698967381671966> <@&798257016291459083> **Rolündeki yetkililerimiz sizinle ilgilenecektir.**
     
-<a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun şuanda taglı alımdadır** (\`र\`) **alarak kayıt olabilirsin.**`, { file: `https://discord.gg/ammetv5cWg`})
-       //   file: "https://cdn.glitch.com/d55080d2-71df-40d9-abb8-a49e6f817002%2Fezgif.com-gif-maker.gif?v=1611042618708"
+<a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun şuanda taglı alımdadır** (\`र\`) **alarak kayıt olabilirsin.**`)
+       //  file: "https://cdn.glitch.com/d55080d2-71df-40d9-abb8-a49e6f817002%2Fezgif.com-gif-maker.gif?v=1611042618708"
 
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\
 

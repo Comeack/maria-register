@@ -124,6 +124,8 @@ client.login(ayarlar.token);
 
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\
 
+//-----------------------HOŞ-GELDİN-MESAJI----------------------\\
+
 client.on("guildMemberAdd", member => {
   require("moment-duration-format");
   var üyesayısı = member.guild.members.cache.size
@@ -150,32 +152,28 @@ client.on("guildMemberAdd", member => {
   const kanal = member.guild.channels.cache.find(
     r => r.id === "798623371193483304"
   );
-  let register = "798257016291459083";
-  let user = client.users.cache.get(member.id);
-  require("moment-duration-format");
-  const kurulus = new Date().getTime() - user.createdAt.getTime();
-  const gecen = moment
-    .duration(kurulus)
-    .format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
-  var kontrol;
-  if (kurulus < 1296000000)
-    kontrol = "**Hesap Durumu:** \`Güvenilmez\` <a:carpi:800296605487726602>";
-  if (kurulus > 1296000000)
-    kontrol = "**Hesap Durumu:** \`Güvenilir\` <a:tik:800296547844620288>";
-  moment.locale("tr");
-  const embed = new Discord.MessageEmbed()
+  let register = '798257016291459083'
+    let user = client.users.cache.get(member.id);
+    require("moment-duration-format");
+      const kurulus = new Date().getTime() - user.createdAt.getTime();  
+     const gecen = moment.duration(kurulus).format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
+    var kontrol;
+  if (kurulus < 1296000000) kontrol = '**Hesap Durumu:** \`Güvenilmez\` <a:carpi:800296605487726602>'
+  if (kurulus > 1296000000) kontrol = '**Hesap Durumu:** \`Güvenilir\` <a:tik:800296547844620288>'
+    moment.locale("tr");
+ 
+ kanal.send(`<a:kelebek_1:799698967381671966> <@` +  member.id + `> **Sunucumuza Hoşgeldin.**
     
-`<a:kelebek_1:799698967381671966> <@` +  member.id + `> **Sunucumuza Hoşgeldin**
-  
-<a:kelebek_1:799698967381671966> **Kayıt olmak için Confirmation odasında** <@&798257016291459083> **yetkililerine ses teyit vermen yeterlidir**
-  
-<a:kelebek_1:799698967381671966> **Seninle beraber** ` +    üyesayısı + ` **bukadar kişiyiz.**
-  
-<a:kelebek_1:799698967381671966>  `+ kontrol + `
+<a:kelebek_1:799698967381671966> `+gecen+` **hesabın önce oluşturulmuş** `+kontrol+`.  
 
 <a:kelebek_1:799698967381671966> **Sunucumuzun kurallarını <#798257143236395019> kanalında belirtilmiştir.**
 
-<a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun tagını  (\`र\`) alarak bizlere destek olabilirsin.**`});
+<a:kelebek_1:799698967381671966> **Seninle beraber** ` +    üyesayısı + ` **bukadar kişiyiz.**
+
+<a:kelebek_1:799698967381671966> <@&798257016291459083> **Rolündeki yetkililerimiz sizinle ilgilenecektir.**
+    
+<a:kelebek_1:799698967381671966> **MAЯIΛ sunucumuzun şuanda taglı alımdadır** (\`र\`) **alarak kayıt olabilirsin.**`);
+  
 
 //-----------------------HOŞ-GELDİN-MESAJI----------------------\\
 
